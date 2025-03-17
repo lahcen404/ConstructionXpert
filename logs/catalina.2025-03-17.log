@@ -152,3 +152,16 @@
 17-Mar-2025 11:25:32.032 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\ENAA\OneDrive\Desktop\ENAA\JAVA EE\ConstructionXpert\conf\Catalina\localhost\ConstructionXpertServices.xml] has finished in [1,552] ms
 17-Mar-2025 11:25:32.035 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8086"]
 17-Mar-2025 11:25:32.052 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1648] milliseconds
+17-Mar-2025 12:58:17.606 INFO [http-nio-8086-exec-1] org.apache.coyote.http11.Http11Processor.service Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+	java.lang.IllegalArgumentException: Invalid character found in the request target [/ConstructionXpertServices/resource?action=updateQuantity&id=${resource.id} ]. The valid characters are defined in RFC 7230 and RFC 3986
+		at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:484)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:270)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1575)

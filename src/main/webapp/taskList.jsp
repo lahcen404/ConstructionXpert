@@ -23,6 +23,42 @@
             background-color: #A8D5BA;
             color: #1A3C34;
         }
+        /* Mobile Card Layout for Tables */
+        @media (max-width: 640px) {
+            .table-mobile-card {
+                display: block;
+            }
+            .table-mobile-card thead {
+                display: none;
+            }
+            .table-mobile-card tbody, .table-mobile-card tr {
+                display: block;
+            }
+            .table-mobile-card tr {
+                margin-bottom: 1rem;
+                border: 1px solid #e5e7eb;
+                border-radius: 0.5rem;
+                padding: 1rem;
+                background-color: #fff;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            .table-mobile-card td {
+                display: flex;
+                justify-content: space-between;
+                padding: 0.5rem 0;
+                border: none;
+            }
+            .table-mobile-card td:before {
+                content: attr(data-label);
+                font-weight: bold;
+                color: #1A3C34;
+                margin-right: 0.5rem;
+            }
+            .table-mobile-card td:last-child {
+                justify-content: center;
+                gap: 0.5rem;
+            }
+        }
     </style>
 </head>
 <body class="bg-[#F9F7F1] text-[#1A3C34] min-h-screen">
@@ -54,7 +90,7 @@
         </a>
     </div>
     <div class="overflow-x-auto">
-        <table class="w-full bg-white rounded-lg shadow-md">
+        <table class="w-full bg-white rounded-lg shadow-md table-mobile-card">
             <thead class="bg-[#2D6A4F] text-white">
             <tr>
                 <th class="p-6 sm:p-3 sm:text-sm">ID</th>
@@ -67,11 +103,11 @@
             <tbody>
             <c:forEach var="task" items="${tasks}">
                 <tr class="border-b hover:bg-[#A8D5BA]/20 transition duration-300">
-                    <td class="p-6 sm:p-3 sm:text-sm">${task.id}</td>
-                    <td class="p-6 sm:p-3 sm:text-sm">${task.description}</td>
-                    <td class="p-6 sm:p-3 sm:text-sm">${task.startDate}</td>
-                    <td class="p-6 sm:p-3 sm:text-sm">${task.endDate}</td>
-                    <td class="p-6 sm:p-3 sm:text-sm">
+                    <td class="p-6 sm:p-3 sm:text-sm" data-label="ID">${task.id}</td>
+                    <td class="p-6 sm:p-3 sm:text-sm" data-label="Description">${task.description}</td>
+                    <td class="p-6 sm:p-3 sm:text-sm" data-label="Start Date">${task.startDate}</td>
+                    <td class="p-6 sm:p-3 sm:text-sm" data-label="End Date">${task.endDate}</td>
+                    <td class="p-6 sm:p-3 sm:text-sm" data-label="Actions">
                         <a href="task?action=update&id=${task.id}&projectId=${param.projectId}" class="text-[#F4A261] hover:text-[#2D6A4F] mr-6 sm:mr-2"><i class="fas fa-edit"></i></a>
                         <a href="task?action=delete&id=${task.id}&projectId=${param.projectId}" class="text-[#2D6A4F] hover:text-[#F4A261]"><i class="fas fa-trash"></i></a>
                     </td>

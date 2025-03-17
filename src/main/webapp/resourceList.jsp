@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ConstructionXpert - Projects</title>
+    <title>ConstructionXpert - Resources</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -81,11 +81,12 @@
         </div>
     </div>
 </nav>
+<!-- Resources Content -->
 <div class="container mx-auto p-6 mt-6">
     <div class="flex justify-between items-center mb-6">
-        <h2 class="text-3xl font-bold text-[#2D6A4F] sm:text-2xl">Projects</h2>
-        <a href="project?action=create" class="bg-[#F4A261] text-white px-4 py-2 rounded-lg shadow-md hover:bg-[#A8D5BA] hover:text-[#1A3C34] transition duration-300 sm:text-sm sm:px-3 sm:py-1">
-            <i class="fas fa-plus"></i> Add Project
+        <h2 class="text-3xl font-bold text-[#2D6A4F] sm:text-2xl">Resources</h2>
+        <a href="resource?action=create" class="bg-[#F4A261] text-white p-6 sm:p-3 rounded-lg shadow-md hover:bg-[#A8D5BA] hover:text-[#1A3C34] transition duration-300 sm:text-sm">
+            <i class="fas fa-plus"></i> Add Resource
         </a>
     </div>
     <div class="overflow-x-auto">
@@ -94,25 +95,22 @@
             <tr>
                 <th class="p-6 sm:p-3 sm:text-sm">ID</th>
                 <th class="p-6 sm:p-3 sm:text-sm">Name</th>
-                <th class="p-6 sm:p-3 sm:text-sm">Description</th>
-                <th class="p-6 sm:p-3 sm:text-sm">Start Date</th>
-                <th class="p-6 sm:p-3 sm:text-sm">End Date</th>
-                <th class="p-6 sm:p-3 sm:text-sm">Budget</th>
+                <th class="p-6 sm:p-3 sm:text-sm">Type</th>
+                <th class="p-6 sm:p-3 sm:text-sm">Quantity</th>
                 <th class="p-6 sm:p-3 sm:text-sm">Actions</th>
             </tr>
             </thead>
             <tbody>
-            <c:forEach var="project" items="${projects}">
+            <c:forEach var="resource" items="${resources}">
                 <tr class="border-b hover:bg-[#A8D5BA]/20 transition duration-300">
-                    <td class="p-6 sm:p-3 sm:text-sm" data-label="ID">${project.id}</td>
-                    <td class="p-6 sm:p-3 sm:text-sm" data-label="Name">${project.name}</td>
-                    <td class="p-6 sm:p-3 sm:text-sm" data-label="Description">${project.description}</td>
-                    <td class="p-6 sm:p-3 sm:text-sm" data-label="Start Date">${project.startDate}</td>
-                    <td class="p-6 sm:p-3 sm:text-sm" data-label="End Date">${project.endDate}</td>
-                    <td class="p-6 sm:p-3 sm:text-sm" data-label="Budget">${project.budget}</td>
+                    <td class="p-6 sm:p-3 sm:text-sm" data-label="ID">${resource.id}</td>
+                    <td class="p-6 sm:p-3 sm:text-sm" data-label="Name">${resource.name}</td>
+                    <td class="p-6 sm:p-3 sm:text-sm" data-label="Type">${resource.type}</td>
+                    <td class="p-6 sm:p-3 sm:text-sm" data-label="Quantity">${resource.quantity}</td>
                     <td class="p-6 sm:p-3 sm:text-sm" data-label="Actions">
-                        <a href="project?action=update&id=${project.id}" class="text-[#F4A261] hover:text-[#2D6A4F] mr-6 sm:mr-2"><i class="fas fa-edit"></i></a>
-                        <a href="project?action=delete&id=${project.id}" class="text-[#2D6A4F] hover:text-[#F4A261]"><i class="fas fa-trash"></i></a>
+                        <a href="resource?action=update&id=${resource.id}" class="text-[#F4A261] hover:text-[#2D6A4F] mr-6 sm:mr-2"><i class="fas fa-edit"></i></a>
+                        <a href="resource?action=delete&id=${resource.id}" class="text-[#2D6A4F] hover:text-[#F4A261] mr-6 sm:mr-2"><i class="fas fa-trash"></i></a>
+                        <a href="resource?action=updateQuantity&id=${resource.id}" class="text-[#F4A261] hover:text-[#2D6A4F]"><i class="fas fa-sync"></i></a>
                     </td>
                 </tr>
             </c:forEach>
