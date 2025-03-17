@@ -23,9 +23,8 @@ CREATE TABLE resources (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     type VARCHAR(50),
-    quantity INT NOT NULL,
-    project_id INT,
-    FOREIGN KEY (project_id) REFERENCES projects(id) ON DELETE SET NULL
+    quantity INT NOT NULL
+    
 );
 
 select * from projects;
