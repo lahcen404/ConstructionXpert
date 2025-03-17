@@ -1,0 +1,17 @@
+0:0:0:0:0:0:0:1 - - [17/Mar/2025:11:25:33 +0000] "GET /ConstructionXpertServices HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [17/Mar/2025:11:25:34 +0000] "GET /ConstructionXpertServices/ HTTP/1.1" 200 57
+0:0:0:0:0:0:0:1 - - [17/Mar/2025:11:25:35 +0000] "GET /favicon.ico HTTP/1.1" 404 605
+0:0:0:0:0:0:0:1 - - [17/Mar/2025:11:25:43 +0000] "GET /ConstructionXpertServices/dashboard.jsp HTTP/1.1" 200 1995
+0:0:0:0:0:0:0:1 - - [17/Mar/2025:11:25:58 +0000] "GET /ConstructionXpertServices/login?logout=true HTTP/1.1" 404 709
+0:0:0:0:0:0:0:1 - - [17/Mar/2025:11:26:26 +0000] "GET /ConstructionXpertServices/dashboard.jsp HTTP/1.1" 200 1995
+0:0:0:0:0:0:0:1 - - [17/Mar/2025:11:27:07 +0000] "GET /ConstructionXpertServices/dashboard.jsp HTTP/1.1" 200 2677
+0:0:0:0:0:0:0:1 - - [17/Mar/2025:11:30:45 +0000] "GET /ConstructionXpertServices/dashboard.jsp HTTP/1.1" 200 2797
+0:0:0:0:0:0:0:1 - - [17/Mar/2025:11:30:54 +0000] "GET /ConstructionXpertServices/dashboard.jsp HTTP/1.1" 200 2797
+0:0:0:0:0:0:0:1 - - [17/Mar/2025:11:31:09 +0000] "GET /ConstructionXpertServices/dashboard.jsp HTTP/1.1" 200 1995
+0:0:0:0:0:0:0:1 - - [17/Mar/2025:11:33:14 +0000] "GET /ConstructionXpertServices/dashboard.jsp HTTP/1.1" 200 2797
+0:0:0:0:0:0:0:1 - - [17/Mar/2025:11:34:58 +0000] "GET /ConstructionXpertServices/dashboard.jsp HTTP/1.1" 200 2970
+0:0:0:0:0:0:0:1 - - [17/Mar/2025:11:35:14 +0000] "GET /ConstructionXpertServices/dashboard.jsp HTTP/1.1" 200 1995
+0:0:0:0:0:0:0:1 - - [17/Mar/2025:11:36:53 +0000] "GET /ConstructionXpertServices/dashboard.jsp HTTP/1.1" 200 2496
+0:0:0:0:0:0:0:1 - - [17/Mar/2025:11:40:03 +0000] "GET /ConstructionXpertServices/dashboard.jsp HTTP/1.1" 200 2497
+0:0:0:0:0:0:0:1 - - [17/Mar/2025:11:44:38 +0000] "GET /ConstructionXpertServices/dashboard.jsp HTTP/1.1" 200 2475
+0:0:0:0:0:0:0:1 - - [17/Mar/2025:11:45:01 +0000] "GET /ConstructionXpertServices/dashboard.jsp HTTP/1.1" 200 2244

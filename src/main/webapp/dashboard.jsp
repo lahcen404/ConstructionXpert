@@ -18,7 +18,9 @@
         </a>
     </div>
 </nav>
-<div class="container mx-auto p-6">
+
+<!-- Dashboard Content -->
+<div class="container mx-auto p-6 mt-6">
     <h2 class="text-3xl font-bold text-[#2D6A4F] mb-6">Dashboard</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <a href="project?action=list" class="bg-[#F4A261] text-white p-6 rounded-lg shadow-md hover:bg-[#A8D5BA] hover:text-[#1A3C34] transition duration-300 transform hover:scale-105">
@@ -34,6 +36,7 @@
             <h3 class="text-xl font-semibold">Manage Resources</h3>
         </a>
     </div>
+    <img src="https://images.pexels.com/photos/439416/pexels-photo-439416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Construction Overview" class="mt-6 w-full h-64 object-cover rounded-lg shadow-md">
 </div>
 </body>
 </html>
