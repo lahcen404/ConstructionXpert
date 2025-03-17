@@ -1,0 +1,10 @@
+0:0:0:0:0:0:0:1 - - [16/Mar/2025:21:55:36 +0000] "GET /ConstructionXpert HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [16/Mar/2025:21:55:37 +0000] "GET /ConstructionXpert/ HTTP/1.1" 200 57
+0:0:0:0:0:0:0:1 - - [16/Mar/2025:21:55:38 +0000] "GET /favicon.ico HTTP/1.1" 404 605
+0:0:0:0:0:0:0:1 - - [16/Mar/2025:21:55:48 +0000] "GET /ConstructionXpert/dashboard.jsp HTTP/1.1" 404 684
+0:0:0:0:0:0:0:1 - - [16/Mar/2025:22:04:01 +0000] "GET /ConstructionXpert/dashboard.jsp HTTP/1.1" 500 2841
+0:0:0:0:0:0:0:1 - - [16/Mar/2025:22:05:12 +0000] "GET /ConstructionXpert/dashboard.jsp HTTP/1.1" 500 2841
+0:0:0:0:0:0:0:1 - - [16/Mar/2025:22:05:30 +0000] "GET /ConstructionXpert/dashboard.jsp HTTP/1.1" 500 2841
+0:0:0:0:0:0:0:1 - - [16/Mar/2025:22:11:05 +0000] "GET /ConstructionXpert HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [16/Mar/2025:22:11:07 +0000] "GET /ConstructionXpert/ HTTP/1.1" 200 57
+0:0:0:0:0:0:0:1 - - [16/Mar/2025:22:11:22 +0000] "GET /ConstructionXpert/dashboard.jsp HTTP/1.1" 200 1995
