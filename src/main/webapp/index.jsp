@@ -49,15 +49,15 @@
 <div class="container mx-auto p-6 mt-6">
     <h2 class="text-3xl font-bold text-[#2D6A4F] mb-6 sm:text-2xl">Dashboard</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <a href="project?action=list" class="bg-[#F4A261] text-white p-6 rounded-lg shadow-md hover:bg-[#A8D5BA] hover:text-[#1A3C34] transition duration-300 transform hover:scale-105 sm:p-4">
+        <a href="projectList.jsp" class="bg-[#F4A261] text-white p-6 rounded-lg shadow-md hover:bg-[#A8D5BA] hover:text-[#1A3C34] transition duration-300 transform hover:scale-105 sm:p-4">
             <i class="fas fa-project-diagram text-4xl mb-2 sm:text-3xl"></i>
             <h3 class="text-xl font-semibold sm:text-lg">Manage Projects</h3>
         </a>
-        <a href="task?projectId=1" class="bg-[#F4A261] text-white p-6 rounded-lg shadow-md hover:bg-[#A8D5BA] hover:text-[#1A3C34] transition duration-300 transform hover:scale-105 sm:p-4">
+        <a href="taskList.jsp" class="bg-[#F4A261] text-white p-6 rounded-lg shadow-md hover:bg-[#A8D5BA] hover:text-[#1A3C34] transition duration-300 transform hover:scale-105 sm:p-4">
             <i class="fas fa-tasks text-4xl mb-2 sm:text-3xl"></i>
             <h3 class="text-xl font-semibold sm:text-lg">Manage Tasks</h3>
         </a>
-        <a href="resource" class="bg-[#F4A261] text-white p-6 rounded-lg shadow-md hover:bg-[#A8D5BA] hover:text-[#1A3C34] transition duration-300 transform hover:scale-105 sm:p-4">
+        <a href="resourceList.jsp" class="bg-[#F4A261] text-white p-6 rounded-lg shadow-md hover:bg-[#A8D5BA] hover:text-[#1A3C34] transition duration-300 transform hover:scale-105 sm:p-4">
             <i class="fas fa-tools text-4xl mb-2 sm:text-3xl"></i>
             <h3 class="text-xl font-semibold sm:text-lg">Manage Resources</h3>
         </a>
