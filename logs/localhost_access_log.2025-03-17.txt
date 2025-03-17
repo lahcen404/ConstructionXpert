@@ -32,3 +32,14 @@
 0:0:0:0:0:0:0:1 - - [17/Mar/2025:12:03:01 +0000] "GET /ConstructionXpertServices/dashboard.jsp HTTP/1.1" 200 4310
 0:0:0:0:0:0:0:1 - - [17/Mar/2025:12:03:24 +0000] "GET /ConstructionXpertServices/dashboard.jsp HTTP/1.1" 200 4313
 0:0:0:0:0:0:0:1 - - [17/Mar/2025:12:04:10 +0000] "GET /ConstructionXpertServices/login.jsp HTTP/1.1" 200 3304
+0:0:0:0:0:0:0:1 - - [17/Mar/2025:12:06:29 +0000] "GET /ConstructionXpertServices/projectList.jsp HTTP/1.1" 200 5005
+0:0:0:0:0:0:0:1 - - [17/Mar/2025:12:07:15 +0000] "GET /ConstructionXpertServices/projectList.jsp HTTP/1.1" 200 5018
+0:0:0:0:0:0:0:1 - - [17/Mar/2025:12:08:36 +0000] "GET /ConstructionXpertServices/taskList.jsp HTTP/1.1" 200 4775
+0:0:0:0:0:0:0:1 - - [17/Mar/2025:12:11:47 +0000] "GET /ConstructionXpertServices/taskList.jsp HTTP/1.1" 200 4790
+0:0:0:0:0:0:0:1 - - [17/Mar/2025:12:12:36 +0000] "GET /ConstructionXpertServices/taskList.jsp HTTP/1.1" 200 4775
+0:0:0:0:0:0:0:1 - - [17/Mar/2025:12:13:02 +0000] "GET /ConstructionXpertServices/projectList.jsp HTTP/1.1" 200 5018
+0:0:0:0:0:0:0:1 - - [17/Mar/2025:12:13:57 +0000] "GET /ConstructionXpertServices/projectList.jsp HTTP/1.1" 200 5018
+0:0:0:0:0:0:0:1 - - [17/Mar/2025:12:14:00 +0000] "GET /ConstructionXpertServices/projectList.jsp HTTP/1.1" 200 5018
+0:0:0:0:0:0:0:1 - - [17/Mar/2025:12:14:18 +0000] "GET /ConstructionXpertServices/projectList.jsp HTTP/1.1" 200 5003
+0:0:0:0:0:0:0:1 - - [17/Mar/2025:12:15:45 +0000] "GET /ConstructionXpertServices/projectList.jsp HTTP/1.1" 200 5003
+0:0:0:0:0:0:0:1 - - [17/Mar/2025:12:18:54 +0000] "GET /ConstructionXpertServices/taskList.jsp HTTP/1.1" 200 4795
