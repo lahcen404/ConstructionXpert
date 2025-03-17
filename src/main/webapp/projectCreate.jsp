@@ -61,7 +61,7 @@
             <%= request.getAttribute("success") %>
         </div>
         <% } %>
-        <form action="project" method="post" class="space-y-6">
+        <form action="ProjectServlet" method="post" class="space-y-6">
             <input type="hidden" name="action" value="create">
             <div>
                 <label for="name" class="block font-bold sm:text-sm">Project Name</label>
