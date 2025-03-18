@@ -1,5 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
+<%@  page import="com.Project.DAO.ProjectDAO" %>
+<%@ page import="com.Project.Model.Project"%>
+
+<%
+
+    String idParam = request.getParameter("id");
+    int projectId=(idParam != null) ? Integer.parseInt(idParam) : -1;
+   ProjectDAO projectDAO=new ProjectDAO();
+   Project project = projectDAO.getProjectById(projectId);
+
+%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,7 +67,7 @@
 <div class="container mx-auto p-6 mt-6">
     <div class="max-w-md mx-auto bg-white rounded-lg shadow-md p-6">
         <h2 class="text-3xl font-bold text-[#2D6A4F] mb-6 text-center sm:text-2xl">
-            <i class="fas fa-plus-square"></i> Add New Project
+            <i class="fas fa-plus-square"></i> Update Project
         </h2>
         <% if (request.getAttribute("error") != null) { %>
         <div class="bg-[#F4A261]/10 text-[#F4A261] p-3 rounded mb-6 text-center sm:text-sm">
@@ -67,31 +79,32 @@
             <%= request.getAttribute("success") %>
         </div>
         <% } %>
-        <form action="ProjectServlet" method="post" class="space-y-6" onsubmit="return validateProjectForm(event)">
+        <form action="updateProjectServlet" method="post" class="space-y-6" onsubmit="return validateProjectForm(event)">
             <input type="hidden" name="action" value="create">
+            <input type="hidden" name="id" value="<%=project.getId()%>">
             <div>
                 <label for="name" class="block font-bold sm:text-sm">Project Name</label>
-                <input type="text" id="name" name="name"  class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]" placeholder="Enter project name">
+                <input type="text" id="name" name="name" value="<%=project.getName()%>"  class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]" placeholder="Enter project name">
                 <div id="nameError" class="error"></div>
             </div>
             <div>
                 <label for="description" class="block font-bold sm:text-sm">Description</label>
-                <textarea id="description" name="description" class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]" placeholder="Enter project description"></textarea>
+                <input id="description" name="description" value="<%=project.getDescription()%>" class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]" placeholder="Enter project description"></input>
                 <div id="descriptionError" class="error"></div>
             </div>
             <div>
                 <label for="start_date" class="block font-bold sm:text-sm">Start Date</label>
-                <input type="date" id="start_date" name="start_date" class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]">
+                <input type="date" id="start_date" name="start_date" value="<%=project.getStart_date()%>" class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]">
                 <div id="startDateError" class="error"></div>
             </div>
             <div>
                 <label for="end_date" class="block font-bold sm:text-sm">End Date</label>
-                <input type="date" id="end_date" name="end_date" class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]">
+                <input type="date" id="end_date" name="end_date" value="<%=project.getEnd_date()%>" class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]">
                 <div id="endDateError" class="error"></div>
             </div>
             <div>
                 <label for="budget" class="block font-bold sm:text-sm">Budget</label>
-                <input type="number" id="budget" name="budget" step="0.01"  class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]" placeholder="Enter budget amount">
+                <input type="number" id="budget" name="budget" value="<%=project.getBudget()%>" step="0.01"  class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]" placeholder="Enter budget amount">
                 <div id="budgetError" class="error"></div>
             </div>
             <button type="submit" class="w-full bg-[#F4A261] text-white p-4 sm:p-3 rounded-lg hover:bg-[#A8D5BA] hover:text-[#1A3C34] transition duration-300 sm:text-sm">
@@ -99,7 +112,7 @@
             </button>
         </form>
         <div class="mt-4 text-center">
-            <a href="projectList.jsp" class="bg-[#2D6A4F] text-white p-4 sm:p-3 rounded-lg hover:bg-[#A8D5BA] hover:text-[#1A3C34] transition duration-300 sm:text-sm">
+            <a href="ProjectServlet" class="bg-[#2D6A4F] text-white p-4 sm:p-3 rounded-lg hover:bg-[#A8D5BA] hover:text-[#1A3C34] transition duration-300 sm:text-sm">
                 <i class="fas fa-arrow-left"></i> Back to Projects
             </a>
         </div>

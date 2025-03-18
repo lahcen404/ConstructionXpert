@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
+<%@ page import="com.Project.Model.Project" %>
+<%@ page import="java.util.List" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,7 +74,7 @@
         </div>
         <div id="menu" class="hidden mt-6 md:flex md:space-x-4 flex-col md:flex-row absolute md:static top-16 left-0 w-full md:w-auto bg-[#2D6A4F] md:bg-transparent p-4 md:p-0 z-10">
             <a href="index.jsp" class="block md:inline-block hover:text-[#A8D5BA] transition duration-200 sm:text-sm py-3 md:py-0 px-4 rounded-lg hover:bg-[#A8D5BA]/20">Dashboard</a>
-            <a href="projectList.jsp" class="block md:inline-block hover:text-[#A8D5BA] transition duration-200 sm:text-sm py-3 md:py-0 px-4 rounded-lg hover:bg-[#A8D5BA]/20">Projects</a>
+            <a href="ProjectServlet" class="block md:inline-block hover:text-[#A8D5BA] transition duration-200 sm:text-sm py-3 md:py-0 px-4 rounded-lg hover:bg-[#A8D5BA]/20">Projects</a>
             <a href="taskList.jsp" class="block md:inline-block hover:text-[#A8D5BA] transition duration-200 sm:text-sm py-3 md:py-0 px-4 rounded-lg hover:bg-[#A8D5BA]/20">Tasks</a>
             <a href="resourceList.jsp" class="block md:inline-block hover:text-[#A8D5BA] transition duration-200 sm:text-sm py-3 md:py-0 px-4 rounded-lg hover:bg-[#A8D5BA]/20">Resources</a>
             <a href="Logout" class="block md:inline-block hover:text-[#A8D5BA] transition duration-200 sm:text-sm py-3 md:py-0 px-4 rounded-lg hover:bg-[#A8D5BA]/20">
@@ -102,20 +104,26 @@
             </tr>
             </thead>
             <tbody>
-            <c:forEach var="project" items="${projects}">
+            <%
+
+                List<Project> projects = (List<Project>) request.getAttribute("projects");
+                for(Project project : projects){
+
+            %>
+
                 <tr class="border-b hover:bg-[#A8D5BA]/20 transition duration-300">
-                    <td class="p-6 sm:p-3 sm:text-sm" data-label="ID">${project.id}</td>
-                    <td class="p-6 sm:p-3 sm:text-sm" data-label="Name">${project.name}</td>
-                    <td class="p-6 sm:p-3 sm:text-sm" data-label="Description">${project.description}</td>
-                    <td class="p-6 sm:p-3 sm:text-sm" data-label="Start Date">${project.startDate}</td>
-                    <td class="p-6 sm:p-3 sm:text-sm" data-label="End Date">${project.endDate}</td>
-                    <td class="p-6 sm:p-3 sm:text-sm" data-label="Budget">${project.budget}</td>
+                    <td class="p-6 sm:p-3 sm:text-sm" data-label="ID"><%=project.getId()%></td>
+                    <td class="p-6 sm:p-3 sm:text-sm" data-label="Name"><%=project.getName()%></td>
+                    <td class="p-6 sm:p-3 sm:text-sm" data-label="Description"><%=project.getDescription()%></td>
+                    <td class="p-6 sm:p-3 sm:text-sm" data-label="Start Date"><%=project.getStart_date()%></td>
+                    <td class="p-6 sm:p-3 sm:text-sm" data-label="End Date"><%=project.getEnd_date()%></td>
+                    <td class="p-6 sm:p-3 sm:text-sm" data-label="Budget"><%=project.getBudget()%></td>
                     <td class="p-6 sm:p-3 sm:text-sm" data-label="Actions">
-                        <a href="project?action=update&id=${project.id}" class="text-[#F4A261] hover:text-[#2D6A4F] mr-6 sm:mr-2"><i class="fas fa-edit"></i></a>
-                        <a href="project?action=delete&id=${project.id}" class="text-[#2D6A4F] hover:text-[#F4A261]"><i class="fas fa-trash"></i></a>
+                        <a href="updateProject.jsp?id=<%=project.getId()%>" class="text-[#F4A261] hover:text-[#2D6A4F] mr-6 sm:mr-2"><i class="fas fa-edit"></i></a>
+                        <a href="project?action=delete&id=<%=project.getId()%>" class="text-[#2D6A4F] hover:text-[#F4A261]"><i class="fas fa-trash"></i></a>
                     </td>
                 </tr>
-            </c:forEach>
+            <%  } %>
             </tbody>
         </table>
     </div>

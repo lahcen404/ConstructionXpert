@@ -27,6 +27,10 @@ public class Project {
         this.budget = budget;
     }
 
+    public Project() {
+
+    }
+
     public int getId() {
         return id;
     }
