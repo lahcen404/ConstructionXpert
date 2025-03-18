@@ -23,6 +23,12 @@
             background-color: #A8D5BA;
             color: #1A3C34;
         }
+        .error {
+            color: #F4A261;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
     </style>
 </head>
 <body class="bg-[#F9F7F1] text-[#1A3C34] min-h-screen">
@@ -61,7 +67,7 @@
             <%= request.getAttribute("success") %>
         </div>
         <% } %>
-        <form action="task" method="post" class="space-y-6">
+        <form action="task" method="post" class="space-y-6" onsubmit="return validateTaskForm(event)">
             <input type="hidden" name="action" value="create">
             <div>
                 <label for="project_id" class="block font-bold sm:text-sm">Project</label>
@@ -71,18 +77,22 @@
                         <option value="${project.id}">${project.name}</option>
                     </c:forEach>
                 </select>
+                <div id="projectIdError" class="error"></div>
             </div>
             <div>
                 <label for="description" class="block font-bold sm:text-sm">Description</label>
-                <textarea id="description" name="description" required class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]" placeholder="Enter task description"></textarea>
+                <textarea id="description" name="description"  class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]" placeholder="Enter task description"></textarea>
+                <div id="descriptionError" class="error"></div>
             </div>
             <div>
                 <label for="start_date" class="block font-bold sm:text-sm">Start Date</label>
                 <input type="date" id="start_date" name="start_date" class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]">
+                <div id="startDateError" class="error"></div>
             </div>
             <div>
                 <label for="end_date" class="block font-bold sm:text-sm">End Date</label>
                 <input type="date" id="end_date" name="end_date" class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]">
+                <div id="endDateError" class="error"></div>
             </div>
             <div>
                 <label for="status" class="block font-bold sm:text-sm">Status</label>
@@ -91,6 +101,7 @@
                     <option value="in_progress">In Progress</option>
                     <option value="completed">Completed</option>
                 </select>
+                <div id="statusError" class="error"></div>
             </div>
             <button type="submit" class="w-full bg-[#F4A261] text-white p-4 sm:p-3 rounded-lg hover:bg-[#A8D5BA] hover:text-[#1A3C34] transition duration-300 sm:text-sm">
                 <i class="fas fa-save"></i> Save Task
@@ -103,12 +114,7 @@
         </div>
     </div>
 </div>
-<script>
-    document.getElementById('menu-toggle').addEventListener('click', function() {
-        const menu = document.getElementById('menu');
-        menu.classList.toggle('hidden');
-        menu.classList.toggle('active');
-    });
-</script>
+<script src="./JS/validation.js" defer></script>
+
 </body>
 </html>

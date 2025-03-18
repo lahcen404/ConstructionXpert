@@ -23,6 +23,12 @@
             background-color: #A8D5BA;
             color: #1A3C34;
         }
+        .error {
+            color: #F4A261;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
     </style>
 </head>
 <body class="bg-[#F9F7F1] text-[#1A3C34] min-h-screen">
@@ -61,21 +67,23 @@
             <%= request.getAttribute("success") %>
         </div>
         <% } %>
-        <form action="resource" method="post" class="space-y-6">
+        <form action="resource" method="post" class="space-y-6" onsubmit="return validateResourceForm(event)">
             <input type="hidden" name="action" value="create">
             <div>
                 <label for="name" class="block font-bold sm:text-sm">Resource Name</label>
-                <input type="text" id="name" name="name" required class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]" placeholder="Enter resource name">
+                <input type="text" id="name" name="name"  class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]" placeholder="Enter resource name">
+                <div id="nameError" class="error"></div>
             </div>
             <div>
                 <label for="type" class="block font-bold sm:text-sm">Type</label>
-                <input type="text" id="type" name="type" class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]" placeholder="Enter resource type (e.g., equipment)">
+                <input type="text" id="type" name="type" class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]" placeholder="Enter resource type ">
+                <div id="typeError" class="error"></div>
             </div>
             <div>
                 <label for="quantity" class="block font-bold sm:text-sm">Quantity</label>
-                <input type="number" id="quantity" name="quantity" required class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]" placeholder="Enter quantity">
+                <input type="number" id="quantity" name="quantity"  class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]" placeholder="Enter quantity">
+                <div id="quantityError" class="error"></div>
             </div>
-
             <button type="submit" class="w-full bg-[#F4A261] text-white p-4 sm:p-3 rounded-lg hover:bg-[#A8D5BA] hover:text-[#1A3C34] transition duration-300 sm:text-sm">
                 <i class="fas fa-save"></i> Save Resource
             </button>
@@ -87,12 +95,7 @@
         </div>
     </div>
 </div>
-<script>
-    document.getElementById('menu-toggle').addEventListener('click', function() {
-        const menu = document.getElementById('menu');
-        menu.classList.toggle('hidden');
-        menu.classList.toggle('active');
-    });
-</script>
+<script src="./JS/validation.js" defer></script>
+
 </body>
 </html>
