@@ -1,3 +1,6 @@
+<%@ page import="com.Project.DAO.ProjectDAO" %>
+<%@ page import="java.util.List" %>
+<%@ page import="com.Project.Model.Project" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
 <!DOCTYPE html>
@@ -42,8 +45,8 @@
         </div>
         <div id="menu" class="hidden mt-6 md:flex md:space-x-4 flex-col md:flex-row absolute md:static top-16 left-0 w-full md:w-auto bg-[#2D6A4F] md:bg-transparent p-4 md:p-0 z-10">
             <a href="index.jsp" class="block md:inline-block hover:text-[#A8D5BA] transition duration-200 sm:text-sm py-3 md:py-0 px-4 rounded-lg hover:bg-[#A8D5BA]/20">Dashboard</a>
-            <a href="projectList.jsp" class="block md:inline-block hover:text-[#A8D5BA] transition duration-200 sm:text-sm py-3 md:py-0 px-4 rounded-lg hover:bg-[#A8D5BA]/20">Projects</a>
-            <a href="taskList.jsp" class="block md:inline-block hover:text-[#A8D5BA] transition duration-200 sm:text-sm py-3 md:py-0 px-4 rounded-lg hover:bg-[#A8D5BA]/20">Tasks</a>
+            <a href="ProjectServlet" class="block md:inline-block hover:text-[#A8D5BA] transition duration-200 sm:text-sm py-3 md:py-0 px-4 rounded-lg hover:bg-[#A8D5BA]/20">Projects</a>
+            <a href="TaskServlet" class="block md:inline-block hover:text-[#A8D5BA] transition duration-200 sm:text-sm py-3 md:py-0 px-4 rounded-lg hover:bg-[#A8D5BA]/20">Tasks</a>
             <a href="resourceList.jsp" class="block md:inline-block hover:text-[#A8D5BA] transition duration-200 sm:text-sm py-3 md:py-0 px-4 rounded-lg hover:bg-[#A8D5BA]/20">Resources</a>
             <a href="Logout" class="block md:inline-block hover:text-[#A8D5BA] transition duration-200 sm:text-sm py-3 md:py-0 px-4 rounded-lg hover:bg-[#A8D5BA]/20">
                 <i class="fas fa-sign-out-alt"></i> Logout
@@ -67,15 +70,19 @@
             <%= request.getAttribute("success") %>
         </div>
         <% } %>
-        <form action="task" method="post" class="space-y-6" onsubmit="return validateTaskForm(event)">
+        <form action="TaskServlet" method="post" class="space-y-6" onsubmit="return validateTaskForm(event)">
             <input type="hidden" name="action" value="create">
             <div>
                 <label for="project_id" class="block font-bold sm:text-sm">Project</label>
                 <select id="project_id" name="project_id" required class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]">
                     <option value="">Select a project</option>
-                    <c:forEach var="project" items="${projects}">
-                        <option value="${project.id}">${project.name}</option>
-                    </c:forEach>
+                    <%
+                        ProjectDAO projectDAO = new ProjectDAO();
+                        List<Project> projects = projectDAO.getAllProjects();
+                        for(Project project : projects){
+                    %>
+                        <option value="<%= project.getId() %>"><%= project.getName() %></option>
+                    <% } %>
                 </select>
                 <div id="projectIdError" class="error"></div>
             </div>
@@ -94,15 +101,7 @@
                 <input type="date" id="end_date" name="end_date" class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]">
                 <div id="endDateError" class="error"></div>
             </div>
-            <div>
-                <label for="status" class="block font-bold sm:text-sm">Status</label>
-                <select id="status" name="status" required class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]">
-                    <option value="pending">Pending</option>
-                    <option value="in_progress">In Progress</option>
-                    <option value="completed">Completed</option>
-                </select>
-                <div id="statusError" class="error"></div>
-            </div>
+
             <button type="submit" class="w-full bg-[#F4A261] text-white p-4 sm:p-3 rounded-lg hover:bg-[#A8D5BA] hover:text-[#1A3C34] transition duration-300 sm:text-sm">
                 <i class="fas fa-save"></i> Save Task
             </button>

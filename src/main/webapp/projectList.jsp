@@ -133,12 +133,8 @@
         </table>
     </div>
 </div>
-<script>
-    document.getElementById('menu-toggle').addEventListener('click', function() {
-        const menu = document.getElementById('menu');
-        menu.classList.toggle('hidden');
-        menu.classList.toggle('active');
-    });
-</script>
+
+<script src="./JS/validation.js" defer></script>
+
 </body>
 </html>

@@ -312,11 +312,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 12:56:40.179 SEVERE [http-nio-8087-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 12:56:40.179 SEVERE [http-nio-8087-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -341,11 +341,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 12:58:38.697 SEVERE [http-nio-8087-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 12:58:38.697 SEVERE [http-nio-8087-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -412,11 +412,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 13:46:29.528 SEVERE [http-nio-8087-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 13:46:29.528 SEVERE [http-nio-8087-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -499,11 +499,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 13:49:38.588 SEVERE [http-nio-8087-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 13:49:38.588 SEVERE [http-nio-8087-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -557,11 +557,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 13:54:54.996 SEVERE [http-nio-8087-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 13:54:54.996 SEVERE [http-nio-8087-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -586,11 +586,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 13:55:18.713 SEVERE [http-nio-8087-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 13:55:18.713 SEVERE [http-nio-8087-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -657,11 +657,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 13:56:00.905 SEVERE [http-nio-8087-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 13:56:00.905 SEVERE [http-nio-8087-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -686,11 +686,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 13:56:06.430 SEVERE [http-nio-8087-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 13:56:06.430 SEVERE [http-nio-8087-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -715,11 +715,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 13:56:19.785 SEVERE [http-nio-8087-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 13:56:19.785 SEVERE [http-nio-8087-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -775,11 +775,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 13:56:43.556 SEVERE [http-nio-8087-exec-4] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 13:56:43.556 SEVERE [http-nio-8087-exec-4] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -835,11 +835,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 13:57:46.948 SEVERE [http-nio-8087-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 13:57:46.948 SEVERE [http-nio-8087-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -906,11 +906,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 14:15:56.916 SEVERE [http-nio-8087-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 14:15:56.916 SEVERE [http-nio-8087-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -935,11 +935,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 14:16:32.568 SEVERE [http-nio-8087-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 14:16:32.568 SEVERE [http-nio-8087-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -964,11 +964,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 14:26:24.320 SEVERE [http-nio-8087-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 14:26:24.320 SEVERE [http-nio-8087-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -993,11 +993,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 14:26:33.682 SEVERE [http-nio-8087-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 14:26:33.682 SEVERE [http-nio-8087-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -1080,11 +1080,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 14:31:44.431 SEVERE [http-nio-8087-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 14:31:44.431 SEVERE [http-nio-8087-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -1138,11 +1138,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 14:39:36.351 SEVERE [http-nio-8087-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 14:39:36.351 SEVERE [http-nio-8087-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -1196,11 +1196,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 14:42:21.315 SEVERE [http-nio-8087-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 14:42:21.315 SEVERE [http-nio-8087-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -1225,11 +1225,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 14:46:20.130 SEVERE [http-nio-8087-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 14:46:20.130 SEVERE [http-nio-8087-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -1283,11 +1283,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 15:04:22.051 SEVERE [http-nio-8087-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 15:04:22.051 SEVERE [http-nio-8087-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -1341,11 +1341,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 15:05:44.334 SEVERE [http-nio-8087-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 15:05:44.334 SEVERE [http-nio-8087-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -1399,11 +1399,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 15:06:40.127 SEVERE [http-nio-8087-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 15:06:40.127 SEVERE [http-nio-8087-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -1457,11 +1457,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 15:07:59.462 SEVERE [http-nio-8087-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 15:07:59.462 SEVERE [http-nio-8087-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -1531,11 +1531,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 15:09:28.264 SEVERE [http-nio-8087-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 15:09:28.264 SEVERE [http-nio-8087-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -1605,11 +1605,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 15:15:01.592 SEVERE [http-nio-8087-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 15:15:01.592 SEVERE [http-nio-8087-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -1634,11 +1634,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 15:16:13.358 SEVERE [http-nio-8087-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 15:16:13.358 SEVERE [http-nio-8087-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -1663,11 +1663,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 15:17:53.425 SEVERE [http-nio-8087-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 15:17:53.425 SEVERE [http-nio-8087-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -1692,11 +1692,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 15:18:57.486 SEVERE [http-nio-8087-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 15:18:57.486 SEVERE [http-nio-8087-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -1783,11 +1783,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 15:35:55.900 SEVERE [http-nio-8087-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 15:35:55.900 SEVERE [http-nio-8087-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -1843,11 +1843,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 15:36:33.732 SEVERE [http-nio-8087-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 15:36:33.732 SEVERE [http-nio-8087-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -1872,11 +1872,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 15:36:38.881 SEVERE [http-nio-8087-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 15:36:38.881 SEVERE [http-nio-8087-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -1943,11 +1943,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 15:37:11.190 SEVERE [http-nio-8087-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 15:37:11.190 SEVERE [http-nio-8087-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -2003,11 +2003,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 15:40:05.241 SEVERE [http-nio-8087-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 15:40:05.241 SEVERE [http-nio-8087-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -2063,11 +2063,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 15:42:45.968 SEVERE [http-nio-8087-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 15:42:45.968 SEVERE [http-nio-8087-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -2123,11 +2123,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 15:48:33.815 SEVERE [http-nio-8087-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 15:48:33.815 SEVERE [http-nio-8087-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -2183,11 +2183,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 15:48:55.327 SEVERE [http-nio-8087-exec-4] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 15:48:55.327 SEVERE [http-nio-8087-exec-4] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -2212,11 +2212,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 15:52:26.551 SEVERE [http-nio-8087-exec-4] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 15:52:26.551 SEVERE [http-nio-8087-exec-4] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -2272,11 +2272,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 15:55:15.635 SEVERE [http-nio-8087-exec-4] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 15:55:15.635 SEVERE [http-nio-8087-exec-4] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -2332,11 +2332,11 @@ Stacktrace:] with root cause
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 		at java.base/java.lang.Thread.run(Thread.java:1575)
-18-Mar-2025 15:55:49.923 SEVERE [http-nio-8087-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServelet] in context with path [/ConstructionXpertServices] threw exception
+18-Mar-2025 15:55:49.923 SEVERE [http-nio-8087-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [com.Project.Servlet.indexServlet] in context with path [/ConstructionXpertServices] threw exception
 	java.lang.IllegalArgumentException: Path [index.jsp] does not start with a "/" character
 		at org.apache.catalina.core.ApplicationContext.getRequestDispatcher(ApplicationContext.java:359)
 		at org.apache.catalina.core.ApplicationContextFacade.getRequestDispatcher(ApplicationContextFacade.java:215)
-		at com.Project.Servlet.indexServelet.doGet(indexServelet.java:16)
+		at com.Project.Servlet.indexServlet.doGet(indexServelet.java:16)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)

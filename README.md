@@ -25,7 +25,7 @@ Frontend: HTML, CSS (Tailwind), JavaScript.
 Tools: Git, Figma for mockups.
 
 # Class Diagram :
-![image](https://github.com/user-attachments/assets/7d87c219-ed34-42d3-bfee-95ab68e8698e)
+![img_2.png](img_2.png)
 
 # USE CASE Diagram :
 ![image](https://github.com/user-attachments/assets/0b2ab16e-655c-4e87-907a-9da8d620bc91)

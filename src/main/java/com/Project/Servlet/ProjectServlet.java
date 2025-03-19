@@ -42,14 +42,22 @@ public class ProjectServlet extends HttpServlet {
         String description = req.getParameter("description");
         String start_date = req.getParameter("start_date");
         String end_date = req.getParameter("end_date");
-        Double budget = Double.valueOf(req.getParameter("budget"));
+        double budget = (req.getParameter("budget") == null && !req.getParameter("budget").isEmpty())
+                            ? Double.parseDouble(req.getParameter("budget"))
+                            : 0.0;
+        
 
-        Project project = new Project(name,description,start_date,end_date,budget);
-        ProjectDAO projectDAO = new ProjectDAO();
+        if (name.isEmpty() || description.isEmpty() || start_date.isEmpty() || end_date.isEmpty()) {
+            resp.sendRedirect("projectCreate.jsp");
+        } else {
 
-        projectDAO.createProject(project);
-        resp.sendRedirect("ProjectServlet");
+           Project project = new Project(name, description, start_date, end_date, budget);
+            ProjectDAO projectDAO = new ProjectDAO();
+
+           projectDAO.createProject(project);
+            resp.sendRedirect("ProjectServlet");
+
+        }
+
     }
-
-
 }
