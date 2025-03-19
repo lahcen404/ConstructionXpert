@@ -1,3 +1,6 @@
+<%@ page import="com.Task.DAO.TaskDAO" %>
+<%@ page import="java.util.List" %>
+<%@ page import="com.Task.Model.Task" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
 <!DOCTYPE html>
@@ -83,8 +86,9 @@
 </nav>
 <!-- Tasks Content -->
 <div class="container mx-auto p-6 mt-6">
+
     <div class="flex justify-between items-center mb-6">
-        <h2 class="text-3xl font-bold text-[#2D6A4F] sm:text-2xl">Tasks for Project ID: ${param.projectId}</h2>
+        <h2 class="text-3xl font-bold text-[#2D6A4F] sm:text-2xl"> </h2>
         <a href="taskCreate.jsp" class="bg-[#F4A261] text-white p-6 sm:p-3 rounded-lg shadow-md hover:bg-[#A8D5BA] hover:text-[#1A3C34] transition duration-300 sm:text-sm">
             <i class="fas fa-plus"></i> Add Task
         </a>
@@ -94,6 +98,7 @@
             <thead class="bg-[#2D6A4F] text-white">
             <tr>
                 <th class="p-6 sm:p-3 sm:text-sm">ID</th>
+                <th class="p-6 sm:p-3 sm:text-sm">ID Project</th>
                 <th class="p-6 sm:p-3 sm:text-sm">Description</th>
                 <th class="p-6 sm:p-3 sm:text-sm">Start Date</th>
                 <th class="p-6 sm:p-3 sm:text-sm">End Date</th>
@@ -101,18 +106,25 @@
             </tr>
             </thead>
             <tbody>
-            <c:forEach var="task" items="${tasks}">
+
+            <%
+                List<Task> tasks = (List<Task>) request.getAttribute("tasks");
+
+            for(Task task : tasks) {
+
+            %>
                 <tr class="border-b hover:bg-[#A8D5BA]/20 transition duration-300">
-                    <td class="p-6 sm:p-3 sm:text-sm" data-label="ID">${task.id}</td>
-                    <td class="p-6 sm:p-3 sm:text-sm" data-label="Description">${task.description}</td>
-                    <td class="p-6 sm:p-3 sm:text-sm" data-label="Start Date">${task.startDate}</td>
-                    <td class="p-6 sm:p-3 sm:text-sm" data-label="End Date">${task.endDate}</td>
+                    <td class="p-6 sm:p-3 sm:text-sm" data-label="ID"><%=task.getId()%></td>
+                    <td class="p-6 sm:p-3 sm:text-sm" data-label="project_id"><%=task.getProjectId()%></td>
+                    <td class="p-6 sm:p-3 sm:text-sm" data-label="Description"><%=task.getDescription()%></td>
+                    <td class="p-6 sm:p-3 sm:text-sm" data-label="Start Date"><%=task.getStart_date()%></td>
+                    <td class="p-6 sm:p-3 sm:text-sm" data-label="End Date"><%=task.getEnd_date()%></td>
                     <td class="p-6 sm:p-3 sm:text-sm" data-label="Actions">
                         <a href="task?action=update&id=${task.id}&projectId=${param.projectId}" class="text-[#F4A261] hover:text-[#2D6A4F] mr-6 sm:mr-2"><i class="fas fa-edit"></i></a>
                         <a href="task?action=delete&id=${task.id}&projectId=${param.projectId}" class="text-[#2D6A4F] hover:text-[#F4A261]"><i class="fas fa-trash"></i></a>
                     </td>
                 </tr>
-            </c:forEach>
+          <% }%>
             </tbody>
         </table>
     </div>

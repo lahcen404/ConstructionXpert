@@ -36,13 +36,14 @@ public class TaskDAO {
             ResultSet rs = ps.executeQuery();
 
             while(rs.next()) {
-                int id = rs.getInt("project_id");
+                int id = rs.getInt("id");
+                int id_project = rs.getInt("project_id");
                 String description = rs.getString("description");
                 String start_date = rs.getString("start_date");
                 String end_date = rs.getString("end_date");
 
 
-                Task task = new Task(id, description, start_date, end_date);
+                Task task = new Task(id,id_project, description, start_date, end_date);
                 tasks.add(task);
 
             }
