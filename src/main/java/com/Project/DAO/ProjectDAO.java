@@ -90,4 +90,15 @@ public class ProjectDAO {
         }
         return project;
     }
+
+    public boolean deleteProject(int id) {
+        try(Connection con = DBConnection.getConnection();
+            PreparedStatement stmnt = con.prepareStatement("delete from projects where id=?")){
+            stmnt.setInt(1,id);;
+            return    stmnt.executeUpdate() > 0;
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
     }

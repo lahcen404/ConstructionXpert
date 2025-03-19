@@ -119,8 +119,13 @@
                     <td class="p-6 sm:p-3 sm:text-sm" data-label="End Date"><%=project.getEnd_date()%></td>
                     <td class="p-6 sm:p-3 sm:text-sm" data-label="Budget"><%=project.getBudget()%></td>
                     <td class="p-6 sm:p-3 sm:text-sm" data-label="Actions">
+
                         <a href="updateProject.jsp?id=<%=project.getId()%>" class="text-[#F4A261] hover:text-[#2D6A4F] mr-6 sm:mr-2"><i class="fas fa-edit"></i></a>
-                        <a href="project?action=delete&id=<%=project.getId()%>" class="text-[#2D6A4F] hover:text-[#F4A261]"><i class="fas fa-trash"></i></a>
+                    <form action="DeleteProjectServlet" method="post">
+                        <input type="hidden" name="id" value="<%=project.getId()%>">
+                        <button type="submit" class="text-[#2D6A4F] hover:text-[#F4A261]"><i class="fas fa-trash"></i>
+                        </button>
+                    </form>
                     </td>
                 </tr>
             <%  } %>
