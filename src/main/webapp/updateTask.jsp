@@ -90,14 +90,15 @@
             <input type="hidden" name="id" value="<%= task.getId() %>">
             <div>
                 <label for="project_id" class="block font-bold sm:text-sm">Project</label>
-                <select id="project_id" name="project_id"  required class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]">
-                    <option value="<%=task.getProjectId()%>">Select a project</option>
+                <select id="project_id" name="project_id" required class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]">
+                    <option value="">Select a project</option>
                     <%
                         ProjectDAO projectDAO = new ProjectDAO();
                         List<Project> projects = projectDAO.getAllProjects();
-                        for(Project project : projects){
+                        for (Project project : projects) {
+                            String selected = (task.getProjectId() == project.getId()) ? "selected" : "";
                     %>
-                    <option value="<%= project.getId() %>"><%= project.getName() %></option>
+                    <option value="<%= project.getId() %>" <%= selected %>><%= project.getName() %></option>
                     <% } %>
                 </select>
                 <div id="projectIdError" class="error"></div>
