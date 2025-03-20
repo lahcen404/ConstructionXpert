@@ -1,3 +1,5 @@
+<%@ page import="com.Ressource.Model.Ressource" %>
+<%@ page import="java.util.List" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
 <!DOCTYPE html>
@@ -64,7 +66,7 @@
 <body class="bg-[#F9F7F1] text-[#1A3C34] min-h-screen">
 <nav class="bg-[#2D6A4F] text-white p-4 shadow-lg">
     <div class="container mx-auto flex justify-between items-center">
-        <h1 class="text-2xl font-bold sm:text-xl mb-4"> <i class="fas fa-hammer"></i>  ConstructionXpert </h1>
+        <h1 class="text-2xl font-bold sm:text-xl mb-4"> <i class="fas fa-hammer"></i> ConstructionXpert </h1>
         <div class="md:hidden">
             <button id="menu-toggle" class="text-white focus:outline-none">
                 <i class="fas fa-bars text-2xl"></i>
@@ -74,7 +76,7 @@
             <a href="index.jsp" class="block md:inline-block hover:text-[#A8D5BA] transition duration-200 sm:text-sm py-3 md:py-0 px-4 rounded-lg hover:bg-[#A8D5BA]/20">Dashboard</a>
             <a href="ProjectServlet" class="block md:inline-block hover:text-[#A8D5BA] transition duration-200 sm:text-sm py-3 md:py-0 px-4 rounded-lg hover:bg-[#A8D5BA]/20">Projects</a>
             <a href="TaskServlet" class="block md:inline-block hover:text-[#A8D5BA] transition duration-200 sm:text-sm py-3 md:py-0 px-4 rounded-lg hover:bg-[#A8D5BA]/20">Tasks</a>
-            <a href="resourceList.jsp" class="block md:inline-block hover:text-[#A8D5BA] transition duration-200 sm:text-sm py-3 md:py-0 px-4 rounded-lg hover:bg-[#A8D5BA]/20">Resources</a>
+            <a href="ResourceServlet" class="block md:inline-block hover:text-[#A8D5BA] transition duration-200 sm:text-sm py-3 md:py-0 px-4 rounded-lg hover:bg-[#A8D5BA]/20">Resources</a>
             <a href="Logout" class="block md:inline-block hover:text-[#A8D5BA] transition duration-200 sm:text-sm py-3 md:py-0 px-4 rounded-lg hover:bg-[#A8D5BA]/20">
                 <i class="fas fa-sign-out-alt"></i> Logout
             </a>
@@ -85,7 +87,7 @@
 <div class="container mx-auto p-6 mt-6">
     <div class="flex justify-between items-center mb-6">
         <h2 class="text-3xl font-bold text-[#2D6A4F] sm:text-2xl">Resources</h2>
-        <a href="resourceCreate.jsp" class="bg-[#F4A261] text-white p-6 sm:p-3 rounded-lg shadow-md hover:bg-[#A8D5BA] hover:text-[#1A3C34] transition duration-300 sm:text-sm">
+        <a href="resourceCreate.jsp" class="bg-[#F4A261] text-white px-6 py-3 sm:px-3 sm:py-2 rounded-lg shadow-md hover:bg-[#A8D5BA] hover:text-[#1A3C34] transition duration-300 sm:text-sm">
             <i class="fas fa-plus"></i> Add Resource
         </a>
     </div>
@@ -93,27 +95,40 @@
         <table class="w-full bg-white rounded-lg shadow-md table-mobile-card">
             <thead class="bg-[#2D6A4F] text-white">
             <tr>
-                <th class="p-6 sm:p-3 sm:text-sm">ID</th>
-                <th class="p-6 sm:p-3 sm:text-sm">Name</th>
-                <th class="p-6 sm:p-3 sm:text-sm">Type</th>
-                <th class="p-6 sm:p-3 sm:text-sm">Quantity</th>
-                <th class="p-6 sm:p-3 sm:text-sm">Actions</th>
+                <th class="px-4 py-3 text-left font-bold sm:text-sm">ID</th>
+                <th class="px-4 py-3 text-left font-bold sm:text-sm">Name</th>
+                <th class="px-4 py-3 text-left font-bold sm:text-sm">Type</th>
+                <th class="px-4 py-3 text-left font-bold sm:text-sm">Quantity</th>
+                <th class="px-4 py-3 text-left font-bold sm:text-sm">Actions</th>
             </tr>
             </thead>
             <tbody>
-            <c:forEach var="resource" items="${resources}">
-                <tr class="border-b hover:bg-[#A8D5BA]/20 transition duration-300">
-                    <td class="p-6 sm:p-3 sm:text-sm" data-label="ID">${resource.id}</td>
-                    <td class="p-6 sm:p-3 sm:text-sm" data-label="Name">${resource.name}</td>
-                    <td class="p-6 sm:p-3 sm:text-sm" data-label="Type">${resource.type}</td>
-                    <td class="p-6 sm:p-3 sm:text-sm" data-label="Quantity">${resource.quantity}</td>
-                    <td class="p-6 sm:p-3 sm:text-sm" data-label="Actions">
-                        <a href="resource?action=update&id=${resource.id}" class="text-[#F4A261] hover:text-[#2D6A4F] mr-6 sm:mr-2"><i class="fas fa-edit"></i></a>
-                        <a href="resource?action=delete&id=${resource.id}" class="text-[#2D6A4F] hover:text-[#F4A261] mr-6 sm:mr-2"><i class="fas fa-trash"></i></a>
-                        <a href="resource?action=updateQuantity&id=${resource.id}" class="text-[#F4A261] hover:text-[#2D6A4F]"><i class="fas fa-sync"></i></a>
-                    </td>
-                </tr>
-            </c:forEach>
+            <%
+                List<Ressource> resources = (List<Ressource>) request.getAttribute("resources");
+                if (resources != null) {
+                    for (Ressource ressource : resources) {
+            %>
+            <tr class="border-b hover:bg-[#A8D5BA]/20 transition duration-300">
+                <td class="px-4 py-3 sm:text-sm" data-label="ID"><%= ressource.getId() %></td>
+                <td class="px-4 py-3 sm:text-sm" data-label="Name"><%= ressource.getName() %></td>
+                <td class="px-4 py-3 sm:text-sm" data-label="Type"><%= ressource.getType() %></td>
+                <td class="px-4 py-3 sm:text-sm" data-label="Quantity"><%= ressource.getQuantity() %></td>
+                <td class="px-4 py-3 sm:text-sm flex items-center gap-3" data-label="Actions">
+                    <a href="updateResource.jsp?id=<%=ressource.getId()%>" class="text-[#F4A261] hover:text-[#2D6A4F]"><i class="fas fa-edit"></i></a>
+                    <a href="DeleteResource?id=<%=ressource.getId()%>" class="text-[#2D6A4F] hover:text-[#F4A261]"><i class="fas fa-trash"></i></a>
+                    <a href="ResourceServlet?action=updateQuantity&id=<%=ressource.getId()%>" class="text-[#F4A261] hover:text-[#2D6A4F]"><i class="fas fa-sync"></i></a>
+                </td>
+            </tr>
+            <%
+                }
+            } else {
+            %>
+            <tr>
+                <td colspan="5" class="text-center py-4 sm:text-sm">No resources available.</td>
+            </tr>
+            <%
+                }
+            %>
             </tbody>
         </table>
     </div>
