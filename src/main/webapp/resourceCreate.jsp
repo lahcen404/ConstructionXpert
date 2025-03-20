@@ -67,7 +67,7 @@
             <%= request.getAttribute("success") %>
         </div>
         <% } %>
-        <form action="resource" method="post" class="space-y-6" onsubmit="return validateResourceForm(event)">
+        <form action="ResourceServlet" method="post" class="space-y-6" >
             <input type="hidden" name="action" value="create">
             <div>
                 <label for="name" class="block font-bold sm:text-sm">Resource Name</label>

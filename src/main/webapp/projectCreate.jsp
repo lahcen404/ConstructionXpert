@@ -24,7 +24,7 @@
             color: #1A3C34;
         }
         .error {
-            color: #F4A261;
+            color: #f33b3b;
             font-size: 0.875rem;
             margin-top: 0.25rem;
             display: none;
@@ -67,7 +67,7 @@
             <%= request.getAttribute("success") %>
         </div>
         <% } %>
-        <form action="ProjectServlet" method="post" class="space-y-6" onsubmit=" validateProjectForm(event)">
+        <form action="ProjectServlet" method="post" class="space-y-6" >
             <input type="hidden" name="action" value="create">
             <div>
                 <label for="name" class="block font-bold sm:text-sm">Project Name</label>

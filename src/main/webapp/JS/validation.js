@@ -8,6 +8,7 @@ function showError(elementId, message, show) {
 
 document.addEventListener('DOMContentLoaded', validateProjectForm);
 
+
 // Validate Project Form
 function validateProjectForm(event) {
     event.preventDefault();
