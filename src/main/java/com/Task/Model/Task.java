@@ -24,6 +24,10 @@ public class Task {
         this.end_date = end_date;
     }
 
+    public Task() {
+
+    }
+
     public int getId() {
         return id;
     }

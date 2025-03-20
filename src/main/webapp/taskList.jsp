@@ -120,9 +120,12 @@
                     <td class="p-6 sm:p-3 sm:text-sm" data-label="Start Date"><%=task.getStart_date()%></td>
                     <td class="p-6 sm:p-3 sm:text-sm" data-label="End Date"><%=task.getEnd_date()%></td>
                     <td class="p-6 sm:p-3 sm:text-sm" data-label="Actions">
-                        <a href="task?action=update&id=${task.id}&projectId=${param.projectId}" class="text-[#F4A261] hover:text-[#2D6A4F] mr-6 sm:mr-2"><i class="fas fa-edit"></i></a>
-                        <a href="task?action=delete&id=${task.id}&projectId=${param.projectId}" class="text-[#2D6A4F] hover:text-[#F4A261]"><i class="fas fa-trash"></i></a>
-                    </td>
+                        <a href="updateTask.jsp?id=<%=task.getId()%>" class="text-[#F4A261] hover:text-[#2D6A4F] mr-6 sm:mr-2"><i class="fas fa-edit"></i></a>
+                        <form action="DeleteTaskServlet" method="post">
+                            <input type="hidden" name="id" value="<%=task.getId()%>">
+                            <button type="submit" class="text-[#2D6A4F] hover:text-[#F4A261]"><i class="fas fa-trash"></i>
+                            </button>
+                        </form></td>
                 </tr>
           <% }%>
             </tbody>

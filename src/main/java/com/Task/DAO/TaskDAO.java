@@ -28,6 +28,48 @@ public class TaskDAO {
         }
     }
 
+    public boolean updateTask(Task task) {
+        try(Connection con = DBConnection.getConnection()){
+            PreparedStatement ps = con.prepareStatement("update tasks SET project_id=?,description=?,start_date=?,end_date=? where id=?");
+            ps.setInt(1,task.getProjectId());
+            ps.setString(2,task.getDescription());
+            ps.setString(3,task.getStart_date());
+            ps.setString(4, task.getEnd_date());
+            ps.setInt(5, task.getId());
+            return ps.executeUpdate() > 0;
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return false;
+    }
+
+    public Task getTaskById(int id) throws SQLException {
+        Task task = null;
+        try (Connection con = DBConnection.getConnection();
+             PreparedStatement ps = con.prepareStatement("select * from tasks where id=?")) {
+            ps.setInt(1, id);
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
+                    task = new Task();
+                    task.setId(rs.getInt("id"));
+                    task.setProjectId(rs.getInt("project_id"));
+                    task.setDescription(rs.getString("description"));
+                    task.setStart_date(rs.getString("start_date"));
+                    task.setEnd_date(rs.getString("end_date"));
+
+
+                }
+            }
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return task;
+    }
+
+
     public List<Task> getAllTasks() {
         List<Task> tasks = new ArrayList<>();
         String query = "select * from tasks";

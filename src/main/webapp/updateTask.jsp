@@ -1,8 +1,23 @@
-<%@ page import="com.Project.DAO.ProjectDAO" %>
+<%@ page import="com.Task.DAO.TaskDAO" %>
 <%@ page import="java.util.List" %>
+<%@ page import="com.Task.Model.Task" %>
+<%@ page import="com.Project.DAO.ProjectDAO" %>
 <%@ page import="com.Project.Model.Project" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
+
+
+
+<%
+
+    String idParam = request.getParameter("id");
+    int taskId=(idParam != null) ? Integer.parseInt(idParam) : -1;
+    TaskDAO taskDAO=new TaskDAO();
+    Task task = taskDAO.getTaskById(taskId);
+
+%>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,7 +73,7 @@
 <div class="container mx-auto p-6 mt-6">
     <div class="max-w-md mx-auto bg-white rounded-lg shadow-md p-6">
         <h2 class="text-3xl font-bold text-[#2D6A4F] mb-6 text-center sm:text-2xl">
-            <i class="fas fa-plus-square"></i> Add New Task
+            <i class="fas fa-plus-square"></i> Update Task
         </h2>
         <% if (request.getAttribute("error") != null) { %>
         <div class="bg-[#F4A261]/10 text-[#F4A261] p-3 rounded mb-6 text-center sm:text-sm">
@@ -70,35 +85,36 @@
             <%= request.getAttribute("success") %>
         </div>
         <% } %>
-        <form action="TaskServlet" method="post" class="space-y-6" onsubmit=" validateProjectForm(event)">
+        <form action="updateTaskServlet" method="post" class="space-y-6" >
             <input type="hidden" name="action" value="create">
+            <input type="hidden" name="id" value="<%= task.getId() %>">
             <div>
                 <label for="project_id" class="block font-bold sm:text-sm">Project</label>
-                <select id="project_id" name="project_id" required class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]">
-                    <option value="">Select a project</option>
+                <select id="project_id" name="project_id"  required class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]">
+                    <option value="<%=task.getProjectId()%>">Select a project</option>
                     <%
                         ProjectDAO projectDAO = new ProjectDAO();
                         List<Project> projects = projectDAO.getAllProjects();
                         for(Project project : projects){
                     %>
-                        <option value="<%= project.getId() %>"><%= project.getName() %></option>
+                    <option value="<%= project.getId() %>"><%= project.getName() %></option>
                     <% } %>
                 </select>
                 <div id="projectIdError" class="error"></div>
             </div>
             <div>
                 <label for="description" class="block font-bold sm:text-sm">Description</label>
-                <textarea id="description" name="description"  class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]" placeholder="Enter task description"></textarea>
+                <input id="description" name="description" value="<%=task.getDescription()%>" class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]" placeholder="Enter task description"></input>
                 <div id="descriptionError" class="error"></div>
             </div>
             <div>
                 <label for="start_date" class="block font-bold sm:text-sm">Start Date</label>
-                <input type="date" id="start_date" name="start_date" class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]">
+                <input type="date" id="start_date" name="start_date" value="<%=task.getStart_date()%>" class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]">
                 <div id="startDateError" class="error"></div>
             </div>
             <div>
                 <label for="end_date" class="block font-bold sm:text-sm">End Date</label>
-                <input type="date" id="end_date" name="end_date" class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]">
+                <input type="date" id="end_date" name="end_date" value="<%=task.getEnd_date()%>" class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]">
                 <div id="endDateError" class="error"></div>
             </div>
 
@@ -107,7 +123,7 @@
             </button>
         </form>
         <div class="mt-4 text-center">
-            <a href="taskList.jsp" class="bg-[#2D6A4F] text-white p-4 sm:p-3 rounded-lg hover:bg-[#A8D5BA] hover:text-[#1A3C34] transition duration-300 sm:text-sm">
+            <a href="TaskServlet" class="bg-[#2D6A4F] text-white p-4 sm:p-3 rounded-lg hover:bg-[#A8D5BA] hover:text-[#1A3C34] transition duration-300 sm:text-sm">
                 <i class="fas fa-arrow-left"></i> Back to Tasks
             </a>
         </div>
