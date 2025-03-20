@@ -69,6 +69,17 @@ public class TaskDAO {
         return task;
     }
 
+    public boolean deleteTask(int id) {
+        try(Connection con = DBConnection.getConnection();
+            PreparedStatement stmnt = con.prepareStatement("delete from tasks where id=?")){
+            stmnt.setInt(1,id);;
+            return    stmnt.executeUpdate() > 0;
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
 
     public List<Task> getAllTasks() {
         List<Task> tasks = new ArrayList<>();

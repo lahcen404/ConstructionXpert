@@ -70,7 +70,7 @@
             <%= request.getAttribute("success") %>
         </div>
         <% } %>
-        <form action="TaskServlet" method="post" class="space-y-6" onsubmit=" validateProjectForm(event)">
+        <form action="TaskServlet" method="post" class="space-y-6" >
             <input type="hidden" name="action" value="create">
             <div>
                 <label for="project_id" class="block font-bold sm:text-sm">Project</label>
