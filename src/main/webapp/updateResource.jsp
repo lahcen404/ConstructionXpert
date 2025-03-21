@@ -1,23 +1,22 @@
+<%@ page import="com.Ressource.DAO.RessourceDAO" %>
+<%@ page import="com.Ressource.Model.Ressource" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
-<%@  page import="com.Project.DAO.ProjectDAO" %>
-<%@ page import="com.Project.Model.Project"%>
 
 <%
 
     String idParam = request.getParameter("id");
-    int projectId=(idParam != null) ? Integer.parseInt(idParam) : -1;
-   ProjectDAO projectDAO=new ProjectDAO();
-   Project project = projectDAO.getProjectById(projectId);
+    int resourceId=(idParam != null) ? Integer.parseInt(idParam) : -1;
+    RessourceDAO resourceDAO=new RessourceDAO();
+    Ressource resource = resourceDAO.getResourceById(resourceId);
 
 %>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ConstructionXpert - Add Project</title>
+    <title>ConstructionXpert - Update Resource</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -57,17 +56,17 @@
             <a href="ProjectServlet" class="block md:inline-block hover:text-[#A8D5BA] transition duration-200 sm:text-sm py-3 md:py-0 px-4 rounded-lg hover:bg-[#A8D5BA]/20">Projects</a>
             <a href="TaskServlet" class="block md:inline-block hover:text-[#A8D5BA] transition duration-200 sm:text-sm py-3 md:py-0 px-4 rounded-lg hover:bg-[#A8D5BA]/20">Tasks</a>
             <a href="ResourceServlet" class="block md:inline-block hover:text-[#A8D5BA] transition duration-200 sm:text-sm py-3 md:py-0 px-4 rounded-lg hover:bg-[#A8D5BA]/20">Resources</a>
-            <a href="login?logout=true" class="block md:inline-block hover:text-[#A8D5BA] transition duration-200 sm:text-sm py-3 md:py-0 px-4 rounded-lg hover:bg-[#A8D5BA]/20">
+            <a href="Logout" class="block md:inline-block hover:text-[#A8D5BA] transition duration-200 sm:text-sm py-3 md:py-0 px-4 rounded-lg hover:bg-[#A8D5BA]/20">
                 <i class="fas fa-sign-out-alt"></i> Logout
             </a>
         </div>
     </div>
 </nav>
-<!-- Add Project Content -->
+<!-- Add Resource Content -->
 <div class="container mx-auto p-6 mt-6">
     <div class="max-w-md mx-auto bg-white rounded-lg shadow-md p-6">
         <h2 class="text-3xl font-bold text-[#2D6A4F] mb-6 text-center sm:text-2xl">
-            <i class="fas fa-plus-square"></i> Update Project
+            <i class="fas fa-plus-square"></i> Add New Resource
         </h2>
         <% if (request.getAttribute("error") != null) { %>
         <div class="bg-[#F4A261]/10 text-[#F4A261] p-3 rounded mb-6 text-center sm:text-sm">
@@ -79,41 +78,30 @@
             <%= request.getAttribute("success") %>
         </div>
         <% } %>
-        <form action="updateProjectServlet" method="post" class="space-y-6" >
+        <form action="ResourceServlet" method="post" class="space-y-6" >
             <input type="hidden" name="action" value="create">
-            <input type="hidden" name="id" value="<%=project.getId()%>">
             <div>
-                <label for="name" class="block font-bold sm:text-sm">Project Name</label>
-                <input type="text" id="name" name="name" value="<%=project.getName()%>"  class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]" placeholder="Enter project name">
+                <label for="name" class="block font-bold sm:text-sm">Resource Name</label>
+                <input type="text" id="name" name="name" value="<%=resource.getName()%>" class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]" placeholder="Enter resource name">
                 <div id="nameError" class="error"></div>
             </div>
             <div>
-                <label for="description" class="block font-bold sm:text-sm">Description</label>
-                <input id="description" name="description" value="<%=project.getDescription()%>" class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]" placeholder="Enter project description"></input>
-                <div id="descriptionError" class="error"></div>
+                <label for="type" class="block font-bold sm:text-sm">Type</label>
+                <input type="text" id="type" name="type" value="<%=resource.getType()%>" class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]" placeholder="Enter resource type ">
+                <div id="typeError" class="error"></div>
             </div>
             <div>
-                <label for="start_date" class="block font-bold sm:text-sm">Start Date</label>
-                <input type="date" id="start_date" name="start_date" value="<%=project.getStart_date()%>" class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]">
-                <div id="startDateError" class="error"></div>
-            </div>
-            <div>
-                <label for="end_date" class="block font-bold sm:text-sm">End Date</label>
-                <input type="date" id="end_date" name="end_date" value="<%=project.getEnd_date()%>" class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]">
-                <div id="endDateError" class="error"></div>
-            </div>
-            <div>
-                <label for="budget" class="block font-bold sm:text-sm">Budget</label>
-                <input type="number" id="budget" name="budget" value="<%=project.getBudget()%>" step="0.01"  class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]" placeholder="Enter budget amount">
-                <div id="budgetError" class="error"></div>
+                <label for="quantity" class="block font-bold sm:text-sm">Quantity</label>
+                <input type="number" id="quantity" name="quantity" value="<%=resource.getQuantity()%>" class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]" placeholder="Enter quantity">
+                <div id="quantityError" class="error"></div>
             </div>
             <button type="submit" class="w-full bg-[#F4A261] text-white p-4 sm:p-3 rounded-lg hover:bg-[#A8D5BA] hover:text-[#1A3C34] transition duration-300 sm:text-sm">
-                <i class="fas fa-save"></i> Save Project
+                <i class="fas fa-save"></i> Save Resource
             </button>
         </form>
         <div class="mt-4 text-center">
-            <a href="ProjectServlet" class="bg-[#2D6A4F] text-white p-4 sm:p-3 rounded-lg hover:bg-[#A8D5BA] hover:text-[#1A3C34] transition duration-300 sm:text-sm">
-                <i class="fas fa-arrow-left"></i> Back to Projects
+            <a href="ResourceServlet" class="bg-[#2D6A4F] text-white p-4 sm:p-3 rounded-lg hover:bg-[#A8D5BA] hover:text-[#1A3C34] transition duration-300 sm:text-sm">
+                <i class="fas fa-arrow-left"></i> Back to Resources
             </a>
         </div>
     </div>

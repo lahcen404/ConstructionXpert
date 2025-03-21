@@ -1,6 +1,7 @@
 package com.Ressource.DAO;
 
 import com.Project.Model.Project;
+import com.Task.Model.Task;
 import com.Util.DBConnection;
 import com.Ressource.Model.Ressource;
 
@@ -51,4 +52,26 @@ public class RessourceDAO {
             System.out.println(ressources);
         }return ressources;
     }
+
+    public Ressource getResourceById(int id) {
+
+            Ressource ressource = null;
+            try (Connection con = DBConnection.getConnection();
+                 PreparedStatement ps = con.prepareStatement("select * from resources where id=?")) {
+                ps.setInt(1, id);
+                try (ResultSet rs = ps.executeQuery()) {
+                    if (rs.next()) {
+                        ressource = new Ressource();
+                        ressource.setId(rs.getInt("id"));
+                        ressource.setName(rs.getString("name"));
+                        ressource.setType(rs.getString("type"));
+                        ressource.setQuantity(rs.getInt("quantity"));
+                    }
+                }
+            }catch (SQLException e) {
+                e.printStackTrace();
+            }
+            return ressource;
+        }
+
 }
