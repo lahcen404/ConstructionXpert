@@ -78,8 +78,9 @@
             <%= request.getAttribute("success") %>
         </div>
         <% } %>
-        <form action="ResourceServlet" method="post" class="space-y-6" >
+        <form action="UpdateResourceServlet" method="post" class="space-y-6" >
             <input type="hidden" name="action" value="create">
+            <input type="hidden" name="id" value="<%= resource.getId() %>">
             <div>
                 <label for="name" class="block font-bold sm:text-sm">Resource Name</label>
                 <input type="text" id="name" name="name" value="<%=resource.getName()%>" class="w-full p-4 sm:p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F4A261]" placeholder="Enter resource name">

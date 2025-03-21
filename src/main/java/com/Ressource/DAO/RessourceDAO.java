@@ -29,6 +29,23 @@ public class RessourceDAO {
 
     }
 
+    public boolean updateRessource(Ressource resource) {
+        try(Connection con = DBConnection.getConnection()){
+            String query = "update resources set name=?,type=?,quantity=? where id=?";
+            PreparedStatement stmnt = con.prepareStatement(query);
+            stmnt.setString(1,resource.getName());
+            stmnt.setString(2,resource.getType());
+            stmnt.setInt(3,resource.getQuantity());
+            stmnt.setInt(4,resource.getId());
+
+            return stmnt.executeUpdate() > 0;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
     public List<Ressource> getAllResources() {
         List<Ressource> ressources = new ArrayList<>();
         String query = "select * from resources";
