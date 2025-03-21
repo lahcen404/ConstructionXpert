@@ -82,3 +82,14 @@
 0:0:0:0:0:0:0:1 - - [21/Mar/2025:14:46:06 +0000] "POST /ConstructionXpertServices/UpdateResourceServlet HTTP/1.1" 302 -
 0:0:0:0:0:0:0:1 - - [21/Mar/2025:14:46:06 +0000] "GET /ConstructionXpertServices/ResourceServlet HTTP/1.1" 200 10087
 0:0:0:0:0:0:0:1 - - [21/Mar/2025:14:47:14 +0000] "GET /ConstructionXpertServices/TaskServlet HTTP/1.1" 200 6301
+0:0:0:0:0:0:0:1 - - [21/Mar/2025:15:02:29 +0000] "GET /ConstructionXpertServices HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [21/Mar/2025:15:02:32 +0000] "GET /ConstructionXpertServices/ HTTP/1.1" 200 4307
+0:0:0:0:0:0:0:1 - - [21/Mar/2025:15:02:40 +0000] "GET /ConstructionXpertServices/ResourceServlet HTTP/1.1" 200 11057
+0:0:0:0:0:0:0:1 - - [21/Mar/2025:15:02:50 +0000] "POST /ConstructionXpertServices/DeleteResourceServlet HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [21/Mar/2025:15:02:50 +0000] "GET /ConstructionXpertServices/DeleteResourceServlet HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [21/Mar/2025:15:02:57 +0000] "GET /ConstructionXpertServices/ResourceServlet HTTP/1.1" 200 9888
+0:0:0:0:0:0:0:1 - - [21/Mar/2025:15:03:53 +0000] "GET /ConstructionXpertServices HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [21/Mar/2025:15:03:55 +0000] "GET /ConstructionXpertServices/ HTTP/1.1" 200 4307
+0:0:0:0:0:0:0:1 - - [21/Mar/2025:15:04:03 +0000] "GET /ConstructionXpertServices/ResourceServlet HTTP/1.1" 200 9888
+0:0:0:0:0:0:0:1 - - [21/Mar/2025:15:04:11 +0000] "POST /ConstructionXpertServices/DeleteResourceServlet HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [21/Mar/2025:15:04:11 +0000] "GET /ConstructionXpertServices/ResourceServlet HTTP/1.1" 200 8720

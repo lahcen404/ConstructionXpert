@@ -46,6 +46,17 @@ public class RessourceDAO {
         return false;
     }
 
+    public boolean deleteResource(int id) {
+        try(Connection con = DBConnection.getConnection();
+            PreparedStatement stmnt = con.prepareStatement("delete from resources where id=?")){
+            stmnt.setInt(1,id);;
+            return    stmnt.executeUpdate() > 0;
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
     public List<Ressource> getAllResources() {
         List<Ressource> ressources = new ArrayList<>();
         String query = "select * from resources";

@@ -115,8 +115,11 @@
                 <td class="px-4 py-3 sm:text-sm" data-label="Quantity"><%= ressource.getQuantity() %></td>
                 <td class="px-4 py-3 sm:text-sm flex items-center gap-3" data-label="Actions">
                     <a href="updateResource.jsp?id=<%=ressource.getId()%>" class="text-[#F4A261] hover:text-[#2D6A4F]"><i class="fas fa-edit"></i></a>
-                    <a href="DeleteResource?id=<%=ressource.getId()%>" class="text-[#2D6A4F] hover:text-[#F4A261]"><i class="fas fa-trash"></i></a>
-                    <a href="ResourceServlet?action=updateQuantity&id=<%=ressource.getId()%>" class="text-[#F4A261] hover:text-[#2D6A4F]"><i class="fas fa-sync"></i></a>
+                    <form action="DeleteResourceServlet" method="post">
+                        <input type="hidden" name="id" value="<%=ressource.getId()%>">
+                        <button type="submit" class="text-[#2D6A4F] hover:text-[#F4A261]"><i class="fas fa-trash"></i>
+                        </button>
+                    </form>                    <a href="ResourceServlet?action=updateQuantity&id=<%=ressource.getId()%>" class="text-[#F4A261] hover:text-[#2D6A4F]"><i class="fas fa-sync"></i></a>
                 </td>
             </tr>
             <%
