@@ -66,7 +66,7 @@
 <body class="bg-[#F9F7F1] text-[#1A3C34] min-h-screen">
 <nav class="bg-[#2D6A4F] text-white p-4 shadow-lg">
     <div class="container mx-auto flex justify-between items-center">
-        <h1 class="text-2xl font-bold sm:text-xl mb-4"> <i class="fas fa-hammer"></i>  ConstructionXpert </h1>
+        <h1 class="text-2xl font-bold sm:text-xl mb-4"> <i class="fas fa-hammer"></i> ConstructionXpert </h1>
         <div class="md:hidden">
             <button id="menu-toggle" class="text-white focus:outline-none">
                 <i class="fas fa-bars text-2xl"></i>
@@ -94,47 +94,60 @@
         <table class="w-full bg-white rounded-lg shadow-md table-mobile-card">
             <thead class="bg-[#2D6A4F] text-white">
             <tr>
-                <th class="p-6 sm:p-3 sm:text-sm">ID</th>
-                <th class="p-6 sm:p-3 sm:text-sm">Name</th>
-                <th class="p-6 sm:p-3 sm:text-sm">Description</th>
-                <th class="p-6 sm:p-3 sm:text-sm">Start Date</th>
-                <th class="p-6 sm:p-3 sm:text-sm">End Date</th>
-                <th class="p-6 sm:p-3 sm:text-sm">Budget</th>
-                <th class="p-6 sm:p-3 sm:text-sm">Actions</th>
+                <th class="p-3 sm:p-2 sm:text-sm text-center">ID</th>
+                <th class="p-3 sm:p-2 sm:text-sm text-center">Name</th>
+                <th class="p-3 sm:p-2 sm:text-sm text-center">Description</th>
+                <th class="p-3 sm:p-2 sm:text-sm text-center">Start Date</th>
+                <th class="p-3 sm:p-2 sm:text-sm text-center">End Date</th>
+                <th class="p-3 sm:p-2 sm:text-sm text-center">Budget</th>
+                <th class="p-3 sm:p-2 sm:text-sm text-center">Actions</th>
             </tr>
             </thead>
             <tbody>
             <%
-
                 List<Project> projects = (List<Project>) request.getAttribute("projects");
-                for(Project project : projects){
-
+                if (projects != null) {
+                    for (Project project : projects) {
             %>
-
-                <tr class="border-b hover:bg-[#A8D5BA]/20 transition duration-300">
-                    <td class="p-6 sm:p-3 sm:text-sm" data-label="ID"><%=project.getId()%></td>
-                    <td class="p-6 sm:p-3 sm:text-sm" data-label="Name"><%=project.getName()%></td>
-                    <td class="p-6 sm:p-3 sm:text-sm" data-label="Description"><%=project.getDescription()%></td>
-                    <td class="p-6 sm:p-3 sm:text-sm" data-label="Start Date"><%=project.getStart_date()%></td>
-                    <td class="p-6 sm:p-3 sm:text-sm" data-label="End Date"><%=project.getEnd_date()%></td>
-                    <td class="p-6 sm:p-3 sm:text-sm" data-label="Budget"><%=project.getBudget()%></td>
-                    <td class="p-6 sm:p-3 sm:text-sm" data-label="Actions">
-
-                        <a href="updateProject.jsp?id=<%=project.getId()%>" class="text-[#F4A261] hover:text-[#2D6A4F] mr-6 sm:mr-2"><i class="fas fa-edit"></i></a>
-                    <form action="DeleteProjectServlet" method="post">
+            <tr class="border-b border-gray-200 hover:bg-[#A8D5BA]/20 transition duration-300">
+                <td class="p-3 sm:p-2 sm:text-sm text-center" data-label="ID"><%=project.getId()%></td>
+                <td class="p-3 sm:p-2 sm:text-sm text-center" data-label="Name"><%=project.getName()%></td>
+                <td class="p-3 sm:p-2 sm:text-sm text-center" data-label="Description"><%=project.getDescription()%></td>
+                <td class="p-3 sm:p-2 sm:text-sm text-center" data-label="Start Date"><%=project.getStart_date()%></td>
+                <td class="p-3 sm:p-2 sm:text-sm text-center" data-label="End Date"><%=project.getEnd_date()%></td>
+                <td class="p-3 sm:p-2 sm:text-sm text-center" data-label="Budget"><%=project.getBudget()%></td>
+                <td class="p-3 sm:p-2 sm:text-sm flex justify-center items-center space-x-2" data-label="Actions">
+                    <a href="updateProject.jsp?id=<%=project.getId()%>" class="text-[#F4A261] hover:text-[#2D6A4F]">
+                        <i class="fas fa-edit"></i>
+                    </a>
+                    <form action="DeleteProjectServlet" method="post" class="inline">
                         <input type="hidden" name="id" value="<%=project.getId()%>">
-                        <button type="submit" class="text-[#2D6A4F] hover:text-[#F4A261]"><i class="fas fa-trash"></i>
+                        <button type="submit" class="text-[#2D6A4F] hover:text-[#F4A261]">
+                            <i class="fas fa-trash"></i>
                         </button>
                     </form>
-                    </td>
-                </tr>
-            <%  } %>
+                </td>
+            </tr>
+            <%
+                }
+            } else {
+            %>
+            <tr>
+                <td colspan="7" class="p-3 text-center text-gray-500">No projects available.</td>
+            </tr>
+            <% } %>
             </tbody>
         </table>
     </div>
 </div>
 
-<script src="./JS/validation.js" defer></script>
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('hidden');
+        menu.classList.toggle('active');
+    });
+</script>
 
 </body>
 </html>

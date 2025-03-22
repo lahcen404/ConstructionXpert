@@ -67,7 +67,7 @@
 <body class="bg-[#F9F7F1] text-[#1A3C34] min-h-screen">
 <nav class="bg-[#2D6A4F] text-white p-4 shadow-lg">
     <div class="container mx-auto flex justify-between items-center">
-        <h1 class="text-2xl font-bold sm:text-xl mb-4"> <i class="fas fa-hammer"></i>  ConstructionXpert </h1>
+        <h1 class="text-2xl font-bold sm:text-xl mb-4"> <i class="fas fa-hammer"></i> ConstructionXpert </h1>
         <div class="md:hidden">
             <button id="menu-toggle" class="text-white focus:outline-none">
                 <i class="fas fa-bars text-2xl"></i>
@@ -86,10 +86,9 @@
 </nav>
 <!-- Tasks Content -->
 <div class="container mx-auto p-6 mt-6">
-
     <div class="flex justify-between items-center mb-6">
-        <h2 class="text-3xl font-bold text-[#2D6A4F] sm:text-2xl"> </h2>
-        <a href="taskCreate.jsp" class="bg-[#F4A261] text-white p-6 sm:p-3 rounded-lg shadow-md hover:bg-[#A8D5BA] hover:text-[#1A3C34] transition duration-300 sm:text-sm">
+        <h2 class="text-3xl font-bold text-[#2D6A4F] sm:text-2xl">Task List</h2>
+        <a href="taskCreate.jsp" class="bg-[#F4A261] text-white p-3 rounded-lg shadow-md hover:bg-[#A8D5BA] hover:text-[#1A3C34] transition duration-300 sm:text-sm">
             <i class="fas fa-plus"></i> Add Task
         </a>
     </div>
@@ -97,37 +96,46 @@
         <table class="w-full bg-white rounded-lg shadow-md table-mobile-card">
             <thead class="bg-[#2D6A4F] text-white">
             <tr>
-                <th class="p-6 sm:p-3 sm:text-sm">ID</th>
-                <th class="p-6 sm:p-3 sm:text-sm">ID Project</th>
-                <th class="p-6 sm:p-3 sm:text-sm">Description</th>
-                <th class="p-6 sm:p-3 sm:text-sm">Start Date</th>
-                <th class="p-6 sm:p-3 sm:text-sm">End Date</th>
-                <th class="p-6 sm:p-3 sm:text-sm">Actions</th>
+                <th class="p-3 sm:p-2 sm:text-sm text-center">ID</th>
+                <th class="p-3 sm:p-2 sm:text-sm text-center">ID Project</th>
+                <th class="p-3 sm:p-2 sm:text-sm text-center">Description</th>
+                <th class="p-3 sm:p-2 sm:text-sm text-center">Start Date</th>
+                <th class="p-3 sm:p-2 sm:text-sm text-center">End Date</th>
+                <th class="p-3 sm:p-2 sm:text-sm text-center">Actions</th>
             </tr>
             </thead>
             <tbody>
-
             <%
                 List<Task> tasks = (List<Task>) request.getAttribute("tasks");
-
-            for(Task task : tasks) {
-
+                if (tasks != null) {
+                    for (Task task : tasks) {
             %>
-                <tr class="border-b hover:bg-[#A8D5BA]/20 transition duration-300">
-                    <td class="p-6 sm:p-3 sm:text-sm" data-label="ID"><%=task.getId()%></td>
-                    <td class="p-6 sm:p-3 sm:text-sm" data-label="project_id"><%=task.getProjectId()%></td>
-                    <td class="p-6 sm:p-3 sm:text-sm" data-label="Description"><%=task.getDescription()%></td>
-                    <td class="p-6 sm:p-3 sm:text-sm" data-label="Start Date"><%=task.getStart_date()%></td>
-                    <td class="p-6 sm:p-3 sm:text-sm" data-label="End Date"><%=task.getEnd_date()%></td>
-                    <td class="p-6 sm:p-3 sm:text-sm" data-label="Actions">
-                        <a href="updateTask.jsp?id=<%=task.getId()%>" class="text-[#F4A261] hover:text-[#2D6A4F] mr-6 sm:mr-2"><i class="fas fa-edit"></i></a>
-                        <form action="DeleteTaskServlet" method="post">
-                            <input type="hidden" name="id" value="<%=task.getId()%>">
-                            <button type="submit" class="text-[#2D6A4F] hover:text-[#F4A261]"><i class="fas fa-trash"></i>
-                            </button>
-                        </form></td>
-                </tr>
-          <% }%>
+            <tr class="border-b border-gray-200 hover:bg-[#A8D5BA]/20 transition duration-300">
+                <td class="p-3 sm:p-2 sm:text-sm text-center" data-label="ID"><%=task.getId()%></td>
+                <td class="p-3 sm:p-2 sm:text-sm text-center" data-label="project_id"><%=task.getProjectId()%></td>
+                <td class="p-3 sm:p-2 sm:text-sm text-center" data-label="Description"><%=task.getDescription()%></td>
+                <td class="p-3 sm:p-2 sm:text-sm text-center" data-label="Start Date"><%=task.getStart_date()%></td>
+                <td class="p-3 sm:p-2 sm:text-sm text-center" data-label="End Date"><%=task.getEnd_date()%></td>
+                <td class="p-3 sm:p-2 sm:text-sm flex justify-center items-center space-x-2" data-label="Actions">
+                    <a href="updateTask.jsp?id=<%=task.getId()%>" class="text-[#F4A261] hover:text-[#2D6A4F]">
+                        <i class="fas fa-edit"></i>
+                    </a>
+                    <form action="DeleteTaskServlet" method="post" class="inline">
+                        <input type="hidden" name="id" value="<%=task.getId()%>">
+                        <button type="submit" class="text-[#2D6A4F] hover:text-[#F4A261]">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </form>
+                </td>
+            </tr>
+            <%
+                }
+            } else {
+            %>
+            <tr>
+                <td colspan="6" class="p-3 text-center text-gray-500">No tasks available.</td>
+            </tr>
+            <% } %>
             </tbody>
         </table>
     </div>
