@@ -26,6 +26,14 @@ CREATE TABLE resources (
     quantity INT NOT NULL
     
 );
+CREATE TABLE TaskResource (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    task_id INT NOT NULL,
+    resource_id INT NOT NULL,
+    assigned_quantity INT NOT NULL CHECK (assigned_quantity > 0),
+    FOREIGN KEY (task_id) REFERENCES tasks(id) ON DELETE CASCADE,
+    FOREIGN KEY (resource_id) REFERENCES resources(id) ON DELETE CASCADE
+);
 
 select * from projects;
 select * from tasks;
