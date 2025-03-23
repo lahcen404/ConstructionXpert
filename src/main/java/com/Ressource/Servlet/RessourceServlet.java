@@ -45,7 +45,6 @@ public class RessourceServlet extends HttpServlet {
         int quantity = Integer.parseInt(req.getParameter("quantity"));
 
         if(name.isEmpty() || type.isEmpty()) {
-
             resp.sendRedirect("resourceCreate.jsp");
         }else{
         Ressource ressource = new Ressource(name, type, quantity);

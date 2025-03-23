@@ -1,0 +1,15 @@
+0:0:0:0:0:0:0:1 - - [23/Mar/2025:00:59:20 +0000] "GET /ConstructionXpertServices/index.jsp HTTP/1.1" 200 4307
+0:0:0:0:0:0:0:1 - - [23/Mar/2025:01:01:48 +0000] "GET /ConstructionXpertServices/index.jsp HTTP/1.1" 200 4307
+0:0:0:0:0:0:0:1 - - [23/Mar/2025:01:01:49 +0000] "GET /ConstructionXpertServices/ProjectServlet HTTP/1.1" 200 9567
+0:0:0:0:0:0:0:1 - - [23/Mar/2025:01:05:56 +0000] "GET /ConstructionXpertServices/projectCreate.jsp HTTP/1.1" 200 5666
+0:0:0:0:0:0:0:1 - - [23/Mar/2025:01:16:28 +0000] "GET /ConstructionXpertServices/TaskServlet HTTP/1.1" 200 9888
+0:0:0:0:0:0:0:1 - - [23/Mar/2025:01:17:05 +0000] "GET /ConstructionXpertServices/taskCreate.jsp HTTP/1.1" 200 5650
+0:0:0:0:0:0:0:1 - - [23/Mar/2025:15:07:52 +0000] "GET /ConstructionXpertServices/ResourceServlet HTTP/1.1" 200 7562
+0:0:0:0:0:0:0:1 - - [23/Mar/2025:15:09:15 +0000] "GET /ConstructionXpertServices/resourceCreate.jsp HTTP/1.1" 200 4945
+0:0:0:0:0:0:0:1 - - [23/Mar/2025:15:09:15 +0000] "GET /ConstructionXpertServices/JS/validation.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [23/Mar/2025:15:09:22 +0000] "POST /ConstructionXpertServices/ResourceServlet HTTP/1.1" 500 1452
+0:0:0:0:0:0:0:1 - - [23/Mar/2025:15:10:14 +0000] "GET /ConstructionXpertServices/resourceCreate.jsp HTTP/1.1" 200 4895
+0:0:0:0:0:0:0:1 - - [23/Mar/2025:15:10:18 +0000] "POST /ConstructionXpertServices/ResourceServlet HTTP/1.1" 500 1452
+0:0:0:0:0:0:0:1 - - [23/Mar/2025:15:10:25 +0000] "POST /ConstructionXpertServices/ResourceServlet HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [23/Mar/2025:15:10:25 +0000] "GET /ConstructionXpertServices/ResourceServlet HTTP/1.1" 200 8751
+0:0:0:0:0:0:0:1 - - [23/Mar/2025:15:10:30 +0000] "GET /ConstructionXpertServices/resourceCreate.jsp HTTP/1.1" 200 4895

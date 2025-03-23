@@ -1,0 +1,378 @@
+22-Mar-2025 15:13:52.994 SEVERE [http-nio-8087-exec-4] org.apache.catalina.core.ApplicationDispatcher.invoke Servlet.service() for servlet [jsp] threw exception
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [90] in the jsp file: [/taskList.jsp]
+Map cannot be resolved to a type
+87:             <tbody>
+88:             <%
+89:                 List<Task> tasks = (List<Task>) request.getAttribute("tasks");
+90:                 Map<Integer, List<TaskResource>> taskResourcesMap = (Map<Integer, List<TaskResource>>) request.getAttribute("taskResourcesMap");
+91:                 RessourceDAO resourceDAO = new RessourceDAO();
+92:                 if (tasks != null) {
+93:                     for (Task task : tasks) {
+
+
+An error occurred at line: [90] in the jsp file: [/taskList.jsp]
+TaskResource cannot be resolved to a type
+87:             <tbody>
+88:             <%
+89:                 List<Task> tasks = (List<Task>) request.getAttribute("tasks");
+90:                 Map<Integer, List<TaskResource>> taskResourcesMap = (Map<Integer, List<TaskResource>>) request.getAttribute("taskResourcesMap");
+91:                 RessourceDAO resourceDAO = new RessourceDAO();
+92:                 if (tasks != null) {
+93:                     for (Task task : tasks) {
+
+
+An error occurred at line: [90] in the jsp file: [/taskList.jsp]
+Map cannot be resolved to a type
+87:             <tbody>
+88:             <%
+89:                 List<Task> tasks = (List<Task>) request.getAttribute("tasks");
+90:                 Map<Integer, List<TaskResource>> taskResourcesMap = (Map<Integer, List<TaskResource>>) request.getAttribute("taskResourcesMap");
+91:                 RessourceDAO resourceDAO = new RessourceDAO();
+92:                 if (tasks != null) {
+93:                     for (Task task : tasks) {
+
+
+An error occurred at line: [90] in the jsp file: [/taskList.jsp]
+TaskResource cannot be resolved to a type
+87:             <tbody>
+88:             <%
+89:                 List<Task> tasks = (List<Task>) request.getAttribute("tasks");
+90:                 Map<Integer, List<TaskResource>> taskResourcesMap = (Map<Integer, List<TaskResource>>) request.getAttribute("taskResourcesMap");
+91:                 RessourceDAO resourceDAO = new RessourceDAO();
+92:                 if (tasks != null) {
+93:                     for (Task task : tasks) {
+
+
+An error occurred at line: [103] in the jsp file: [/taskList.jsp]
+TaskResource cannot be resolved to a type
+100:                 <td class="p-3 sm:p-2 sm:text-sm text-center" data-label="End Date"><%=task.getEnd_date()%></td>
+101:                 <td class="p-3 sm:p-2 sm:text-sm text-center" data-label="Assigned Resources">
+102:                     <%
+103:                         List<TaskResource> assignedResources = taskResourcesMap.get(task.getId());
+104:                         if (assignedResources != null && !assignedResources.isEmpty()) {
+105:                             for (TaskResource tr : assignedResources) {
+106:                                 Ressource resource = resourceDAO.getResourceById(tr.getResourceId());
+
+
+An error occurred at line: [105] in the jsp file: [/taskList.jsp]
+TaskResource cannot be resolved to a type
+102:                     <%
+103:                         List<TaskResource> assignedResources = taskResourcesMap.get(task.getId());
+104:                         if (assignedResources != null && !assignedResources.isEmpty()) {
+105:                             for (TaskResource tr : assignedResources) {
+106:                                 Ressource resource = resourceDAO.getResourceById(tr.getResourceId());
+107:                                 if (resource != null) {
+108:                     %>
+
+
+An error occurred at line: [157] in the jsp file: [/taskList.jsp]
+Duplicate local variable resourceDAO
+154:                 <select id="resourceId" name="resourceId" required class="w-full p-2 border rounded-lg">
+155:                     <option value="">Select a resource</option>
+156:                     <%
+157:                         RessourceDAO resourceDAO = new RessourceDAO();
+158:                         List<Ressource> resources = resourceDAO.getAllResources();
+159:                         for (Ressource resource : resources) {
+160:                     %>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:72)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:192)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:524)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:373)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:345)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:331)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:633)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:409)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:331)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:268)
+		at com.Task.Servlet.TaskServlet.doGet(TaskServlet.java:33)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1575)
+22-Mar-2025 15:19:43.485 SEVERE [http-nio-8087-exec-7] org.apache.catalina.core.ApplicationDispatcher.invoke Servlet.service() for servlet [jsp] threw exception
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [90] in the jsp file: [/taskList.jsp]
+Map cannot be resolved to a type
+87:             <tbody>
+88:             <%
+89:                 List<Task> tasks = (List<Task>) request.getAttribute("tasks");
+90:                 Map<Integer, List<TaskResource>> taskResourcesMap = (Map<Integer, List<TaskResource>>) request.getAttribute("taskResourcesMap");
+91:                 RessourceDAO resourceDAO = new RessourceDAO();
+92:                 if (tasks != null) {
+93:                     for (Task task : tasks) {
+
+
+An error occurred at line: [90] in the jsp file: [/taskList.jsp]
+TaskResource cannot be resolved to a type
+87:             <tbody>
+88:             <%
+89:                 List<Task> tasks = (List<Task>) request.getAttribute("tasks");
+90:                 Map<Integer, List<TaskResource>> taskResourcesMap = (Map<Integer, List<TaskResource>>) request.getAttribute("taskResourcesMap");
+91:                 RessourceDAO resourceDAO = new RessourceDAO();
+92:                 if (tasks != null) {
+93:                     for (Task task : tasks) {
+
+
+An error occurred at line: [90] in the jsp file: [/taskList.jsp]
+Map cannot be resolved to a type
+87:             <tbody>
+88:             <%
+89:                 List<Task> tasks = (List<Task>) request.getAttribute("tasks");
+90:                 Map<Integer, List<TaskResource>> taskResourcesMap = (Map<Integer, List<TaskResource>>) request.getAttribute("taskResourcesMap");
+91:                 RessourceDAO resourceDAO = new RessourceDAO();
+92:                 if (tasks != null) {
+93:                     for (Task task : tasks) {
+
+
+An error occurred at line: [90] in the jsp file: [/taskList.jsp]
+TaskResource cannot be resolved to a type
+87:             <tbody>
+88:             <%
+89:                 List<Task> tasks = (List<Task>) request.getAttribute("tasks");
+90:                 Map<Integer, List<TaskResource>> taskResourcesMap = (Map<Integer, List<TaskResource>>) request.getAttribute("taskResourcesMap");
+91:                 RessourceDAO resourceDAO = new RessourceDAO();
+92:                 if (tasks != null) {
+93:                     for (Task task : tasks) {
+
+
+An error occurred at line: [103] in the jsp file: [/taskList.jsp]
+TaskResource cannot be resolved to a type
+100:                 <td class="p-3 sm:p-2 sm:text-sm text-center" data-label="End Date"><%=task.getEnd_date()%></td>
+101:                 <td class="p-3 sm:p-2 sm:text-sm text-center" data-label="Assigned Resources">
+102:                     <%
+103:                         List<TaskResource> assignedResources = taskResourcesMap.get(task.getId());
+104:                         if (assignedResources != null && !assignedResources.isEmpty()) {
+105:                             for (TaskResource tr : assignedResources) {
+106:                                 Ressource resource = resourceDAO.getResourceById(tr.getResourceId());
+
+
+An error occurred at line: [105] in the jsp file: [/taskList.jsp]
+TaskResource cannot be resolved to a type
+102:                     <%
+103:                         List<TaskResource> assignedResources = taskResourcesMap.get(task.getId());
+104:                         if (assignedResources != null && !assignedResources.isEmpty()) {
+105:                             for (TaskResource tr : assignedResources) {
+106:                                 Ressource resource = resourceDAO.getResourceById(tr.getResourceId());
+107:                                 if (resource != null) {
+108:                     %>
+
+
+An error occurred at line: [157] in the jsp file: [/taskList.jsp]
+Duplicate local variable resourceDAO
+154:                 <select id="resourceId" name="resourceId" required class="w-full p-2 border rounded-lg">
+155:                     <option value="">Select a resource</option>
+156:                     <%
+157:                         RessourceDAO resourceDAO = new RessourceDAO();
+158:                         List<Ressource> resources = resourceDAO.getAllResources();
+159:                         for (Ressource resource : resources) {
+160:                     %>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:72)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:192)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:524)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:373)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:345)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:331)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:633)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:409)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:331)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:268)
+		at com.Task.Servlet.TaskServlet.doGet(TaskServlet.java:33)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1575)
+22-Mar-2025 15:19:59.653 SEVERE [http-nio-8087-exec-10] org.apache.catalina.core.ApplicationDispatcher.invoke Servlet.service() for servlet [jsp] threw exception
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [90] in the jsp file: [/taskList.jsp]
+Map cannot be resolved to a type
+87:             <tbody>
+88:             <%
+89:                 List<Task> tasks = (List<Task>) request.getAttribute("tasks");
+90:                 Map<Integer, List<TaskResource>> taskResourcesMap = (Map<Integer, List<TaskResource>>) request.getAttribute("taskResourcesMap");
+91:                 RessourceDAO resourceDAO = new RessourceDAO();
+92:                 if (tasks != null) {
+93:                     for (Task task : tasks) {
+
+
+An error occurred at line: [90] in the jsp file: [/taskList.jsp]
+TaskResource cannot be resolved to a type
+87:             <tbody>
+88:             <%
+89:                 List<Task> tasks = (List<Task>) request.getAttribute("tasks");
+90:                 Map<Integer, List<TaskResource>> taskResourcesMap = (Map<Integer, List<TaskResource>>) request.getAttribute("taskResourcesMap");
+91:                 RessourceDAO resourceDAO = new RessourceDAO();
+92:                 if (tasks != null) {
+93:                     for (Task task : tasks) {
+
+
+An error occurred at line: [90] in the jsp file: [/taskList.jsp]
+Map cannot be resolved to a type
+87:             <tbody>
+88:             <%
+89:                 List<Task> tasks = (List<Task>) request.getAttribute("tasks");
+90:                 Map<Integer, List<TaskResource>> taskResourcesMap = (Map<Integer, List<TaskResource>>) request.getAttribute("taskResourcesMap");
+91:                 RessourceDAO resourceDAO = new RessourceDAO();
+92:                 if (tasks != null) {
+93:                     for (Task task : tasks) {
+
+
+An error occurred at line: [90] in the jsp file: [/taskList.jsp]
+TaskResource cannot be resolved to a type
+87:             <tbody>
+88:             <%
+89:                 List<Task> tasks = (List<Task>) request.getAttribute("tasks");
+90:                 Map<Integer, List<TaskResource>> taskResourcesMap = (Map<Integer, List<TaskResource>>) request.getAttribute("taskResourcesMap");
+91:                 RessourceDAO resourceDAO = new RessourceDAO();
+92:                 if (tasks != null) {
+93:                     for (Task task : tasks) {
+
+
+An error occurred at line: [103] in the jsp file: [/taskList.jsp]
+TaskResource cannot be resolved to a type
+100:                 <td class="p-3 sm:p-2 sm:text-sm text-center" data-label="End Date"><%=task.getEnd_date()%></td>
+101:                 <td class="p-3 sm:p-2 sm:text-sm text-center" data-label="Assigned Resources">
+102:                     <%
+103:                         List<TaskResource> assignedResources = taskResourcesMap.get(task.getId());
+104:                         if (assignedResources != null && !assignedResources.isEmpty()) {
+105:                             for (TaskResource tr : assignedResources) {
+106:                                 Ressource resource = resourceDAO.getResourceById(tr.getResourceId());
+
+
+An error occurred at line: [105] in the jsp file: [/taskList.jsp]
+TaskResource cannot be resolved to a type
+102:                     <%
+103:                         List<TaskResource> assignedResources = taskResourcesMap.get(task.getId());
+104:                         if (assignedResources != null && !assignedResources.isEmpty()) {
+105:                             for (TaskResource tr : assignedResources) {
+106:                                 Ressource resource = resourceDAO.getResourceById(tr.getResourceId());
+107:                                 if (resource != null) {
+108:                     %>
+
+
+An error occurred at line: [157] in the jsp file: [/taskList.jsp]
+Duplicate local variable resourceDAO
+154:                 <select id="resourceId" name="resourceId" required class="w-full p-2 border rounded-lg">
+155:                     <option value="">Select a resource</option>
+156:                     <%
+157:                         RessourceDAO resourceDAO = new RessourceDAO();
+158:                         List<Ressource> resources = resourceDAO.getAllResources();
+159:                         for (Ressource resource : resources) {
+160:                     %>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:72)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:192)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:524)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:373)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:345)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:331)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:633)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:409)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:331)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:268)
+		at com.Task.Servlet.TaskServlet.doGet(TaskServlet.java:33)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:663)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1575)

@@ -105,7 +105,6 @@
         </div>
     </div>
 </div>
-<script src="./JS/validation.js" defer></script>
 
 </body>
 </html>
